@@ -7,11 +7,25 @@
 	</div> -->
 
 	<img src="img/logo.jpg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 300px; ">
-	<div class="col-lg-6 col-md-8">
-	<div class="input-group">
-  <input type="text" aria-label="Pesquisar" class="form-control">
-  <input type="date" aria-label="data do evento" class="form-control" data-date-format="DD-MM-YYYY" value="data do evento">
-  <input type="" name="">
-</div>
-</div>
+
+<form>
+  <div class="form-row">
+  	<div class="form-group col-md-4">
+      <label class="labelbranca">Nome</label>
+      <input type="text" class="form-control">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputCity" class="labelbranca">Cidade</label>
+      <input type="text" class="form-control" id="inputCity">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputEstado" class="labelbranca">Categoria</label>
+      <select id="inputEstado" class="form-control">
+        <option selected>Escolher...</option>
+        <option>Show</option>
+      </select>
+    </div>
+  </div>
+  <button class="btn btn1" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+</form>
 </div>

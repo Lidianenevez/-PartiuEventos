@@ -1,13 +1,12 @@
 <div class="container">
   <div class="section-header">
     <h2>Eventos em Destaque</h2>
-    <p>Here are some of our speakers</p>
   </div>
 
   <div class="row">
     <div class="col-lg-4 col-md-6">
       <div class="speaker">
-        <img src="img/speakers/1.jpg" alt="Speaker 1" class="img-fluid">
+        <img src="img/speakers/bizpage-preview.png" alt="Speaker 1" class="img-fluid" height="500">
         <div class="details">
           <h3><a href="speaker-details.html">Brenden Legros</a></h3>
           <p>Quas alias incidunt</p>

@@ -5,13 +5,13 @@
 
   <ul class="nav nav-tabs" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" href="#day-1" role="tab" data-toggle="tab">Day 1</a>
+      <a class="nav-link active" href="#day-1" role="tab" data-toggle="tab">Hoje</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">Day 2</a>
+      <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">Amanhã</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#day-3" role="tab" data-toggle="tab">Day 3</a>
+      <a class="nav-link" href="#day-3" role="tab" data-toggle="tab">Depois</a>
     </li>
   </ul>
 

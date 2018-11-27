@@ -174,7 +174,7 @@ h6 {
   text-transform: uppercase;
 }
 
-#header #logo h1 span {
+#header #logo h1 span  {
   color: #f82249;
 }
 
@@ -363,10 +363,16 @@ h6 {
     box-shadow: 3px rgb(252, 3, 91);
     font-family: "Raleway", sans-serif;
     font-weight: 600;
-    font-size: 1px;
+    font-size: 16px;
     
 }
-
+.labelbranca{
+  color: #fff;
+}
+form{
+  border-color: #000;
+  border-radius: 20% #f82249;
+}
 /* Mobile Nav Toggle */
 
 #mobile-nav-toggle {

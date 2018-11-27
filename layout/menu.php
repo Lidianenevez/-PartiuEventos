@@ -10,7 +10,7 @@
     <li><a href="#speakers">Eventos</a></li>
     <li><a href="#schedule">Cadastre-se</a></li>
     <li><a href="">Login</a></li>
-    <li class="btn1"><a href="criar_evento.php">Divulgar Evento</a></li>
+    <li class="btn1"><a href="novo-evento.blade.php">Divulgar Evento</a></li>
   </ul>
 
 </nav><!-- #nav-menu-container -->
