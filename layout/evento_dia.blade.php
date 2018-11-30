@@ -10,24 +10,14 @@
     <li class="nav-item">
       <a class="nav-link" href="#day-2" role="tab" data-toggle="tab">Amanhã</a>
     </li>
-
   </ul>
 
-  <h3 class="sub-heading">Voluptatem nulla veniam soluta et corrupti consequatur neque eveniet officia. Eius
-  necessitatibus voluptatem quis labore perspiciatis quia.</h3>
+  
 
   <div class="tab-content row justify-content-center">
 
     <!-- Schdule Day 1 -->
     <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
-
-      <div class="row schedule-item">
-        <div class="col-md-2"><time>09:30 AM</time></div>
-        <div class="col-md-10">
-          <h4>Registration</h4>
-          <p>Fugit voluptas iusto maiores temporibus autem numquam magnam.</p>
-        </div>
-      </div>
 
       <div class="row schedule-item">
         <div class="col-md-2"><time>10:00 AM</time></div>

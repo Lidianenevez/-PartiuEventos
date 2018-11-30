@@ -12,11 +12,11 @@
     <div class="form-row">
      <div class="form-group col-md-5">
       <label class="labelbranca">Nome</label>
-      <input type="text" class="form-control" placeholder="Pesquisar" >
+      <input type="text" class="form-control" placeholder="Pesquisar por nome" >
     </div>
     <div class="form-group col-md-5">
       <label for="inputCity" class="labelbranca">Cidade</label>
-      <input type="text" class="form-control" id="inputCity" placeholder="Pesquisar" >
+      <input type="text" class="form-control" id="inputCity" placeholder="Pesquisar por cidade" >
     </div>
     <div class="form-group col-md-2">
       <button class="btn btn3" type="submit" >Procurar <i class="fa fa-search" aria-hidden="true"></i></button>

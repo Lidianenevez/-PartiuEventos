@@ -3,8 +3,10 @@
     <div class="row">
 
       <div class="col-lg-3 col-md-6 footer-info">
-        <img src="img/logo.png" alt="TheEvenet">
-        <p>In alias aperiam. Placeat tempore facere. Officiis voluptate ipsam vel eveniet est dolor et totam porro. Perspiciatis ad omnis fugit molestiae recusandae possimus. Aut consectetur id quis. In inventore consequatur ad voluptate cupiditate debitis accusamus repellat cumque.</p>
+        <center><img src="img/logo.jpg" alt="logo" class="rounded-circle img-center img-fluid shadow shadow-lg--hover"></center>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris   </p>
       </div>
 
       <div class="col-lg-3 col-md-6 footer-links">
@@ -55,7 +57,7 @@
 
 <div class="container">
   <div class="copyright">
-    &copy; Copyright <strong>Partiu Eventos</strong>. 
+    &copy; Copyright <strong>#PartiuEventos </strong>2018. 
   </div>
   
 </div>

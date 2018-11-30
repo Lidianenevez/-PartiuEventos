@@ -1,8 +1,8 @@
 <div id="logo" class="pull-left">
-  <!-- Uncomment below if you prefer to use a text logo -->
-  <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
-  <a href="#intro" class=" navbar-brand"><img src="img/logo.jpg" class="d-inline-block align-top"></a>
-</div>
+        <!-- Uncomment below if you prefer to use a text logo -->
+        <!-- <h1><a href="#main">C<span>o</span>nf</a></h1>-->
+        <a href="#intro" class="scrollto"><img src="img/logo.jpg" alt="" title=""></a>
+      </div>
 
 <nav id="nav-menu-container">
   <ul class="nav-menu">
@@ -20,7 +20,7 @@
     </li>
     <li><a class="linkmenu" data-toggle="modal" data-target="#cadastro">Cadastre-se</a></li>
     <li><a class="linkmenu" data-toggle="modal" data-target="#login">Login</a></li>
-    <li class="btn1"><a href="novo-evento.blade.php">Divulgar Evento</a></li>
+    <li><a href="novo-evento.blade.php" class="about-btn scrollto">Divulgar Evento</a></li>
   </ul>
 
 </nav><!-- #nav-menu-container -->

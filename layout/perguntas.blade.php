@@ -1,5 +1,4 @@
 <div class="container">
-
           <div class="section-header">
             <h2>F.A.Q </h2>
           </div>
