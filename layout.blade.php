@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -99,6 +100,14 @@
        ?>
 
      </section>
+
+
+     <section id="speakers" class="wow fadeInUp">
+        <?php
+        require __DIR__.'/layout/categorias1.blade.php';
+        ?>
+
+      </section>
      
     <!--==========================
       Perguntas
