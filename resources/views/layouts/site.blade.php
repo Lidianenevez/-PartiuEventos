@@ -60,9 +60,19 @@
         <a class="dropdown-item" href="#">Workshops</a>
       </div>
     </li>
-    <li><a class="linkmenu" data-toggle="modal" data-target="#cadastro">Cadastre-se</a></li>
-    <li><a class="linkmenu" data-toggle="modal" data-target="#login">Login</a></li>
-    <li><a href="novo-evento.blade.php" class="about-btn scrollto">Divulgar Evento</a></li>
+    @if (Route::has('login'))
+      @auth
+        <li><a class="linkmenu" data-toggle="modal" data-target="#cadastro">Home</a></li>
+      @else
+      <li><a class="linkmenu" href="{{ route('login') }}">Login</a></li>
+        @if (Route::has('register'))
+          <li><a class="linkmenu" data-toggle="modal" data-target="#cadastro">Cadastre-se</a></li>
+        @endif
+      @endauth
+    @endif
+    <!-- <li><a class="linkmenu" data-toggle="modal" data-target="#cadastro">Cadastre-se</a></li>
+    <li><a class="linkmenu" data-toggle="modal" href="{{ route('login') }}" data-target="#login">Login</a></li>
+    <li><a href="novo-evento.blade.php" class="about-btn scrollto">Divulgar Evento</a></li> -->
   </ul>
 
 </nav><!-- #nav-menu-container -->
@@ -681,13 +691,14 @@
                         <div class="text-center text-muted mb-4">
                           <small class="logintext">Faça seu login</small>
                         </div>
-                        <form role="form">
+                        <form method="POST" action="{{ route('login') }}">
+                          @csrf
                           <div class="form-group mb-3">
                             <div class="input-group input-group-alternative">
                               <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fa fa-at" aria-hidden="true"></i></span>
                               </div>
-                              <input class="form-control" placeholder="Email" type="email">
+                              <input id="email" type="email" placeholder="Email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}">
                             </div>
                           </div>
                           <div class="form-group">
@@ -695,17 +706,20 @@
                               <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
                               </div>
-                              <input class="form-control" placeholder="Senha" type="password">
+                              <input id="password" type="password" placeholder="Senha" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password">
                             </div>
                           </div>
                           <div class="custom-control custom-control-alternative custom-checkbox">
-                            <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
-                            <label class="custom-control-label" for=" customCheckLogin">
+                            <input class="custom-control-input" id="customCheckLogin" type="checkbox">
+                            <label class="custom-control-label" for="customCheckLogin">
                               <span>Lembre-me</span>
                             </label>
                           </div>
                           <div class="text-center">
-                            <button type="button" class="btn btn2 my-4">Entrar</button>
+                            <button type="submit" class="btn btn2 my-4">Entrar</button>
+                            <button type="submit" class="btn btn-primary">
+                              {{ __('Login') }}
+                            </button>
                           </div>
                         </form>
                       </div>
@@ -769,9 +783,9 @@
                             </div>
                           </div>
                           <div class="custom-control custom-control-alternative custom-checkbox">
-                            <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
-                            <label class="custom-control-label" for=" customCheckLogin">
-                              <span>Eu concordo com a  <a href="#" style="color: blue">política de privacidade</a> </span>
+                            <input class="custom-control-input" id="customCheckRegister" type="checkbox">
+                            <label class="custom-control-label" for="customCheckRegister">
+                              <span>Eu concordo com a <a href="#" style="color: blue">política de privacidade</a> </span>
                             </label>
                           </div>
                           <div class="text-center">
@@ -799,7 +813,7 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
     <!-- Contact Form JavaScript File -->
-    <script src="contactform/contactform.js"></script>
+    <!-- <script src="contactform/contactform.js"></script> -->
 
     <!-- Template Main Javascript File -->
     <script src="js/main.js"></script>
