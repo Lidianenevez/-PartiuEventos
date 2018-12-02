@@ -1,9 +1,64 @@
-@extends('layouts.app')
+@extends('layouts.site')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+<div class="col-md-4">
+            <div class="" id="login" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+              <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+                <div class="modal-content">
+                  <div class="modal-body p-0">
+                    <div class="card bg-secondary shadow border-0">
+                      <div class="card-header bg-white pb-2">
+                        <div class="text-muted text-center mb-3">
+                        </div>
+                        <div class="btn-wrapper text-center">
+                          <a href="#" class="btn btn-neutral btn-icon">
+                            <span class="btn-inner--icon">
+                              <img src="img/icon/google.svg">
+                            </span>
+                            <span class="btn-inner--text">Google</span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="card-body px-lg-5 py-lg-5 cardmodal">
+                        <div class="text-center text-muted mb-4">
+                          <small class="logintext">Faça seu login</small>
+                        </div>
+                        <form method="POST" action="{{ route('login') }}">
+                          @csrf
+                          <div class="form-group mb-3">
+                            <div class="input-group input-group-alternative">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-at" aria-hidden="true"></i></span>
+                              </div>
+                              <input id="email" type="email" placeholder="Email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="input-group input-group-alternative">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
+                              </div>
+                              <input id="password" type="password" placeholder="Senha" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password">
+                            </div>
+                          </div>
+                          <div class="custom-control custom-control-alternative custom-checkbox">
+                            <input class="custom-control-input" id="customCheckLogin" type="checkbox"> 
+                            <label class="custom-control-label" for="customCheckLogin">
+                              <span>Lembre-me</span>
+                            </label>
+                          </div>
+                          <div class="text-center">
+                            <button type="submit" class="btn btn2 my-4">{{ __('Login') }}</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
             <div class="card">
                 <div class="card-header">{{ __('Login') }}</div>
 
@@ -67,7 +122,66 @@
                     </form>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
 @endsection
+
+<!-- ==========================
+    Modal login
+    ============================
+    <div class="col-md-4">
+            <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="modal-form" aria-hidden="true">
+              <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+                <div class="modal-content">
+                  <div class="modal-body p-0">
+                    <div class="card bg-secondary shadow border-0">
+                      <div class="card-header bg-white pb-2">
+                        <div class="text-muted text-center mb-3">
+                        </div>
+                        <div class="btn-wrapper text-center">
+                          <a href="#" class="btn btn-neutral btn-icon">
+                            <span class="btn-inner--icon">
+                              <img src="img/icon/google.svg">
+                            </span>
+                            <span class="btn-inner--text">Google</span>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="card-body px-lg-5 py-lg-5 cardmodal">
+                        <div class="text-center text-muted mb-4">
+                          <small class="logintext">Faça seu login</small>
+                        </div>
+                        <form method="POST" action="{{ route('login') }}">
+                          @csrf
+                          <div class="form-group mb-3">
+                            <div class="input-group input-group-alternative">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-at" aria-hidden="true"></i></span>
+                              </div>
+                              <input id="email" type="email" placeholder="Email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="input-group input-group-alternative">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
+                              </div>
+                              <input id="password" type="password" placeholder="Senha" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password">
+                            </div>
+                          </div>
+                          <div class="custom-control custom-control-alternative custom-checkbox">
+                            <input class="custom-control-input" id="customCheckLogin" type="checkbox"> 
+                            <label class="custom-control-label" for="customCheckLogin">
+                              <span>Lembre-me</span>
+                            </label>
+                          </div>
+                          <div class="text-center">
+                            <button type="submit" class="btn btn2 my-4">{{ __('Login') }}</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
