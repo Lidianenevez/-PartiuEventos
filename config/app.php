@@ -165,7 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Artesaos\Providers\CidadesServiceProvider::class,
         /*
          * Application Service Providers...
          */
