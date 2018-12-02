@@ -51,7 +51,7 @@
 
 <nav id="nav-menu-container">
   <ul class="nav-menu">
-    <li class="menu-active"><a href="index.blade.php">Home</a></li>
+    <li class="@if(Request::url() == route('inicial')) menu-active @else linkmenu @endif"><a href="{{ route('inicial') }}">Home</a></li>
     <li><a href="eventos.blade.php">Eventos</a></li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -67,7 +67,7 @@
       @auth
         <li><a class="linkmenu" href="{{ route('home') }}">Home</a></li>
       @else
-      <li><a class="linkmenu" href="{{ route('login') }}">Login</a></li>
+      <li><a class="@if(Request::url() == route('login')) menu-active @else linkmenu @endif" href="{{ route('login') }}">Login</a></li>
         @if (Route::has('register'))
           <li><a class="linkmenu" data-toggle="modal" data-target="#cadastro">Cadastre-se</a></li>
         @endif
