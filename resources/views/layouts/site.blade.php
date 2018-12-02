@@ -93,6 +93,7 @@
     <script src="{{ url('lib/wow/wow.min.js') }}"></script>
     <script src="{{ url('lib/venobox/venobox.min.js') }}"></script>
     <script src="{{ url('lib/owlcarousel/owl.carousel.min.js') }}"></script>
+    <script src="{{ url('vendor/artesaos/cidades/js/scripts.js') }}"></script>
 
     <!-- Contact Form JavaScript File -->
     <!-- <script src="{{ url('contactform/contactform.js') }}"></script> -->

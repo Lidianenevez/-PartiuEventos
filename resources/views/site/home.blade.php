@@ -35,6 +35,10 @@
 </form>
 </div>
     </section>
+    <form action="" method="post">
+    <select id="uf" default="MG"></select>
+    <select id="cidade"></select>
+    </form>
 
     <main id="main">
     <!--==========================
