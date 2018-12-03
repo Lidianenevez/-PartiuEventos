@@ -66,10 +66,11 @@
     @if (Route::has('login'))
       @auth
         <li><a class="linkmenu" href="{{ route('home') }}">Home</a></li>
+        <li><a href="{{ route('evento.create') }}" class="about-btn scrollto">Divulgar Evento</a></li>
       @else
       <li><a class="linkmenu" href="{{ route('login') }}">Login</a></li>
         @if (Route::has('register'))
-          <li><a class="linkmenu" href="{{ route('register') }}">Cadastre-se</a></li>
+          <li><a class="about-btn scrollto" href="{{ route('register') }}">Cadastre-se</a></li>
         @endif
       @endauth
     @endif
@@ -94,6 +95,14 @@
     <script src="{{ url('lib/venobox/venobox.min.js') }}"></script>
     <script src="{{ url('lib/owlcarousel/owl.carousel.min.js') }}"></script>
     <script src="{{ url('vendor/artesaos/cidades/js/scripts.js') }}"></script>
+
+    <script>
+      $('#uf').ufs({
+          onChange: function(uf){
+              $('#cidade').cidades({uf: uf});
+          }
+      });
+   </script>
 
     <!-- Contact Form JavaScript File -->
     <!-- <script src="{{ url('contactform/contactform.js') }}"></script> -->

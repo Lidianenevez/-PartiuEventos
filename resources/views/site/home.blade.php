@@ -36,7 +36,7 @@
 </div>
     </section>
     <form action="" method="post">
-    <select id="uf" default="MG"></select>
+    <select id="uf" default="AP"></select>
     <select id="cidade"></select>
     </form>
 
