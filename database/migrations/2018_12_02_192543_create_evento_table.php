@@ -17,8 +17,13 @@ class CreateEventoTable extends Migration
             $table->increments('id');
             $table->string('nome_evento');
             $table->text('descricao');
+            $table->integer('cidade');
             $table->float('preco', 8, 2);
             $table->timestamps();
+            $table->unsignedInteger('fk_user_id');
+            $table->unsignedInteger('fk_categoria_id');
+            $table->foreign('fk_user_id')->references('id')->on('users');
+            $table->foreign('fk_categoria_id')->references('id')->on('categoria');
         });
     }
 
