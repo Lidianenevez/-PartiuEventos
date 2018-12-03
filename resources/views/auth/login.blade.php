@@ -46,10 +46,10 @@
 											</div>
 											<input id="password" type="password" placeholder="{{ __('Password') }}" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password">
 											@if ($errors->has('password'))
-						<span class="invalid-feedback" role="alert">
-						  <strong>{{ $errors->first('password') }}</strong>
-						</span>
-					  @endif
+												<span class="invalid-feedback" role="alert">
+													<strong>{{ $errors->first('password') }}</strong>
+												</span>
+											@endif
 										</div>
 									</div>
 									<div class="custom-control custom-control-alternative custom-checkbox">
@@ -61,10 +61,10 @@
 									<div class="text-center">
 										<button type="submit" class="btn btn2 my-4">{{ __('Login') }}</button>
 										@if (Route::has('password.request'))
-					  <a class="btn btn-link" href="{{ route('password.request') }}">
-						{{ __('Forgot Your Password?') }}
-					  </a>
-					@endif
+											<a class="btn btn-link" href="{{ route('password.request') }}">
+											{{ __('Forgot Your Password?') }}
+											</a>
+										@endif
 									</div>
 								</form>
 							</div>
