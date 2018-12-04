@@ -8,14 +8,14 @@
 				<div class="card-header">Dashboard</div>
 
 				<div class="card-body">
-					@if (session('status'))
-						<div class="alert alert-success" role="alert">
-							{{ session('status') }}
-						</div>
-					@endif
 					@if (session('msg_success'))
 						<div class="alert alert-success">
 							{{ session('msg_success') }}
+						</div>
+					@endif
+					@if (session('msg_danger'))
+						<div class="alert alert-danger">
+							{{ session('msg_danger') }}
 						</div>
 					@endif
 

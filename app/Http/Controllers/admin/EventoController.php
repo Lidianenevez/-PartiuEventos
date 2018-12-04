@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Controller;
 use App\Evento;
 use Auth;
@@ -26,7 +27,9 @@ class EventoController extends Controller
 	 */
 	public function index()
 	{
-		//
+		Storage::delete('storage\app\public\posts\1\1_20181204_060657.jpeg');
+		$eventos = Evento::where('fk_user_id',Auth::id())->get();
+		return view('admin.evento',compact('eventos'));
 	}
 
 	/**
@@ -97,7 +100,8 @@ class EventoController extends Controller
 	 */
 	public function edit($id)
 	{
-		//
+		$e = Evento::find($id);
+		return view('admin.editar_evento', compact('e'));
 	}
 
 	/**
@@ -120,6 +124,14 @@ class EventoController extends Controller
 	 */
 	public function destroy($id)
 	{
-		//
+		$e = Evento::find($id);
+		if($e->fk_user_id == Auth::id()){
+			
+			$e->delete();
+			return redirect()->route('home')
+							->with('msg_success','Você excluiu o seu evento!');	
+		}
+		return redirect()->route('home')
+					->with('msg_danger','Você não tem permissão para excluir este evento! Denucie o evento para a admininstração do sistema.');
 	}
 }
