@@ -113,7 +113,33 @@ class EventoController extends Controller
 	 */
 	public function update(Request $request, $id)
 	{
-		//
+		$validatedData = $request->validate([
+			'descricao' => 'required',
+			'nome_evento' => 'required|max:191',
+			'categoria' => 'required',
+			'preco' => 'required|numeric',
+			'cidade' => 'required',
+		]);
+		$e = Evento::find($id);
+		$e->nome_evento = $request->nome_evento;
+		$e->descricao = $request->descricao;
+		if($request->imagem){
+			$extention = $request->file('imagem')->extension();
+			$nomeantigo = explode('.',$e->imagem);
+			$nameImage = $nomeantigo[0].'.'.$extention;
+			$request->file('imagem')->storeAs('posts/'.Auth::id(), $nameImage);
+			$e->imagem = $nameImage;
+		}
+		$e->cidade = $request->cidade;
+		$e->preco = $request->preco;
+		$e->fk_categoria_id = $request->categoria;
+		if($e->fk_user_id == Auth::id()){
+			$e->save();
+			return redirect()->route('home')
+							->with('msg_success','Você atualizou o seu evento!');	
+		}
+		return redirect()->route('home')
+							->with('msg_danger','Você não tem permissão para atualizar este evento!');	
 	}
 
 	/**
@@ -126,7 +152,6 @@ class EventoController extends Controller
 	{
 		$e = Evento::find($id);
 		if($e->fk_user_id == Auth::id()){
-			
 			$e->delete();
 			return redirect()->route('home')
 							->with('msg_success','Você excluiu o seu evento!');	

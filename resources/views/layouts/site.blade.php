@@ -66,6 +66,7 @@
     @if (Route::has('login'))
       @auth
         <li><a class="linkmenu" href="{{ route('home') }}">Home</a></li>
+        <li><a class="linkmenu" href="{{ route('evento.index') }}">Meus eventos</a></li>
         <li><a href="{{ route('evento.create') }}" class="about-btn scrollto">Divulgar Evento</a></li>
       @else
       <li><a class="linkmenu" href="{{ route('login') }}">Login</a></li>
