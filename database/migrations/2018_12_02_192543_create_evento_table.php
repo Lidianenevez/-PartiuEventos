@@ -15,10 +15,11 @@ class CreateEventoTable extends Migration
     {
         Schema::create('evento', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('imagem');
             $table->string('nome_evento');
             $table->text('descricao');
             $table->integer('cidade');
-            $table->float('preco', 8, 2);
+            $table->float('preco', 8, 2)->nullable();
             $table->timestamps();
             $table->unsignedInteger('fk_user_id');
             $table->unsignedInteger('fk_categoria_id');

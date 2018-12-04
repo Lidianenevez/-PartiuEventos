@@ -6,53 +6,45 @@
 		<div class="section-header">
 			<h2>Insira as informações </h2>
 		</div>
-    <form method="POST" class="col-md-8" action="{{ route('evento.store') }}">
+    <form method="POST" class="col-md-8" action="{{ route('evento.store') }}" enctype="multipart/form-data">
 			@csrf
-      <div class="form-row">
-	      <div class="form-group col-md-6">
-	        <label for="nome_evento">Nome do Evento</label>
-          <input id="nome_evento" type="nome_evento" placeholder="Digite o nome do evento" class="form-control{{ $errors->has('nome_evento') ? ' is-invalid' : '' }}" name="nome_evento" value="{{ old('nome_evento') }}">
-          @if ($errors->has('nome_evento'))
-            <span class="invalid-feedback" role="alert">
-              <strong>{{ $errors->first('nome_evento') }}</strong>
-            </span>
-          @endif
-	      </div>
-	      <div class="form-group col-md-6">
-	        <label for="nome_evento">Nome do Evento</label>
-          <input id="nome_evento" type="nome_evento" placeholder="Digite o nome do evento" class="form-control{{ $errors->has('nome_evento') ? ' is-invalid' : '' }}" name="nome_evento" value="{{ old('nome_evento') }}">
-          @if ($errors->has('nome_evento'))
-            <span class="invalid-feedback" role="alert">
-              <strong>{{ $errors->first('nome_evento') }}</strong>
-            </span>
-          @endif
-	      </div>
-      </div>
-      <div class="form-group mb-3">
-        <div class="input-group input-group-alternative">
-          <input id="nome_evento" type="nome_evento" placeholder="{{ __('E-Mail Address') }}" class="form-control{{ $errors->has('nome_evento') ? ' is-invalid' : '' }}" name="nome_evento" value="{{ old('nome_evento') }}">
-          @if ($errors->has('nome_evento'))
-            <span class="invalid-feedback" role="alert">
-              <strong>{{ $errors->first('nome_evento') }}</strong>
-            </span>
-          @endif
-        </div>
-      </div>
       <div class="form-group">
-        <label for="nome_evento">Nome do Evento</label>
-        <input id="nome_evento" type="nome_evento" placeholder="Digite o nome do evento" class="form-control{{ $errors->has('nome_evento') ? ' is-invalid' : '' }}" name="nome_evento" value="{{ old('nome_evento') }}">
-        @if ($errors->has('nome_evento'))
-          <span class="invalid-feedback" role="alert">
-            <strong>{{ $errors->first('nome_evento') }}</strong>
+        <label for="descricao">Descrição do Evento</label>
+        <textarea name="descricao" placeholder="Digite a descrição do evento" id="descricao" cols="30" rows="10" class="form-control">{{ old('descricao') }}</textarea>
+        @if ($errors->has('descricao'))
+          <span class="text-danger" role="alert">
+            <strong>{{ $errors->first('descricao') }}</strong>
           </span>
         @endif
       </div>
+      <div class="form-row">
+	      <div class="form-group col-md-7">
+	        <label for="nome_evento">Nome do Evento</label>
+          <input id="nome_evento" type="text" placeholder="Digite o nome do evento" class="form-control" name="nome_evento" value="{{ old('nome_evento') }}">
+          @if ($errors->has('nome_evento'))
+            <span class="text-danger" role="alert">
+              <strong>{{ $errors->first('nome_evento') }}</strong>
+            </span>
+          @endif
+	      </div>
+        <div class="form-group col-md-5">
+	        <label for="categoria">Categoria do Evento</label>
+          <select class="form-control" id="categoria" name="categoria">
+            <option value='s'>s</option>
+          </select>
+          @if ($errors->has('categoria'))
+            <span class="text-danger" role="alert">
+              <strong>{{ $errors->first('categoria') }}</strong>
+            </span>
+          @endif
+	      </div>
+      </div>
       <div class="form-group">
-        <label for="nome_evento">Nome do Evento</label>
-        <input id="nome_evento" type="nome_evento" placeholder="Digite o nome do evento" class="form-control{{ $errors->has('nome_evento') ? ' is-invalid' : '' }}" name="nome_evento" value="{{ old('nome_evento') }}">
-        @if ($errors->has('nome_evento'))
-          <span class="invalid-feedback" role="alert">
-            <strong>{{ $errors->first('nome_evento') }}</strong>
+        <label for="preco">Preço do Evento</label>
+        <input id="preco" type="number" step="0.01" placeholder="Digite o nome do evento" class="form-control" name="preco" value="{{ old('preco') }}">
+        @if ($errors->has('preco'))
+          <span class="text-danger" role="alert">
+            <strong>{{ $errors->first('preco') }}</strong>
           </span>
         @endif
       </div>
@@ -61,18 +53,28 @@
           <label for="uf">Estado</label>
           <select class="form-control" default="AP" id="uf"></select>
         </div>
-        <div class="form-group col-md-7">
+        <div class="form-group col-md-5">
           <label for="cidade">Cidade</label>
-          <select id="cidade" class="form-control"></select>
+          <select id="cidade" name="cidade" class="form-control"></select>
+          @if ($errors->has('cidade'))
+            <span class="text-danger" role="alert">
+              <strong>{{ $errors->first('cidade') }}</strong>
+            </span>
+          @endif
         </div>
-        <div class="form-group col-md-2">
-          <label for="inputCEP">CEP</label>
-          <input type="text" class="form-control" id="inputCEP">
-        </div>
+        <div class="form-group col-md-4">
+	        <label for="imagem">Arte do Evento</label>
+          <input id="imagem" type="file" placeholder="Digite o nome do evento" class="form-control" name="imagem">
+          @if ($errors->has('imagem'))
+            <span class="text-danger" role="alert">
+              <strong>{{ $errors->first('imagem') }}</strong>
+            </span>
+          @endif
+	      </div>
       </div>
       <div class="form-group">
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <input class="form-check-input" type="checkbox" id="gridCheck" require>
           <label class="form-check-label" for="gridCheck">
           Clique em mim
           </label>

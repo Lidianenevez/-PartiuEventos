@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Evento;
+use Auth;
 
 class EventoController extends Controller
 {
@@ -45,7 +47,27 @@ class EventoController extends Controller
 	 */
 	public function store(Request $request)
 	{
-		//
+		$validatedData = $request->validate([
+			'descricao' => 'required',
+			'nome_evento' => 'required|max:191',
+			'categoria' => 'required',
+			'preco' => 'required|numeric',
+			'cidade' => 'required',
+			'imagem' => 'image|dimensions:max_width=1000,max_height=1000',
+		]);
+		$e = new Evento;
+		$e->fk_user_id = Auth::id();
+		$e->descricao = $request->descricao;
+		$e->nome_evento = $request->nome_evento;
+		$e->categoria = $request->categoria;
+		$e->preco = $request->preco;
+		$e->cidade = $request->cidade;
+		$e->imagem = $request->imagem;
+		//dd($e);
+		$e->save();
+		return redirect()
+					->route('home')
+						->with('msg_success','Você criou um evento com sucesso!');
 	}
 
 	/**
