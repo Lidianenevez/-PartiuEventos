@@ -59,11 +59,19 @@ class EventoController extends Controller
 		$e->fk_user_id = Auth::id();
 		$e->descricao = $request->descricao;
 		$e->nome_evento = $request->nome_evento;
-		$e->categoria = $request->categoria;
+		$e->fk_categoria_id = $request->categoria;
 		$e->preco = $request->preco;
 		$e->cidade = $request->cidade;
-		$e->imagem = $request->imagem;
-		//dd($e);
+		if ($request->hasFile('imagem') && $request->file('imagem')->isValid()) {
+			$extention = $request->file('imagem')->extension();
+			$nameImage = Auth::id().'_'.date("Ymd_His").'.'.$extention;
+			$e->imagem = $nameImage;
+			$upload = $request->file('imagem')->storeAs('posts/'.Auth::id(), $nameImage);
+			if (!$upload)
+				return redirect()
+								->back()
+									->with('msg_danger','Falha ao fazer o upload da imagem!');
+		}
 		$e->save();
 		return redirect()
 					->route('home')

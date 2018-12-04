@@ -6,6 +6,11 @@
 		<div class="section-header">
 			<h2>Insira as informações </h2>
 		</div>
+    @if (session('msg_danger'))
+			<div class="alert alert-danger col-md-8">
+				{{ session('msg_danger') }}
+		  </div>
+		@endif
     <form method="POST" class="col-md-8" action="{{ route('evento.store') }}" enctype="multipart/form-data">
 			@csrf
       <div class="form-group">
@@ -30,7 +35,7 @@
         <div class="form-group col-md-5">
 	        <label for="categoria">Categoria do Evento</label>
           <select class="form-control" id="categoria" name="categoria">
-            <option value='s'>s</option>
+            <option value='1'>s</option>
           </select>
           @if ($errors->has('categoria'))
             <span class="text-danger" role="alert">
