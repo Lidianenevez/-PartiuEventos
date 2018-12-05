@@ -69,7 +69,8 @@
         <li><a class="linkmenu" href="{{ route('evento.index') }}">Meus eventos</a></li>
         <li><a href="{{ route('evento.create') }}" class="about-btn scrollto">Divulgar Evento</a></li>
       @else
-      <li><a class="linkmenu" href="{{ route('login') }}">Login</a></li>
+        <li><a class="linkmenu" href="{{ route('login') }}">Login</a></li>
+        <li><a href="{{ route('evento.create') }}" class="about-btn scrollto">Divulgar Evento</a></li>
         @if (Route::has('register'))
           <li><a class="about-btn scrollto" href="{{ route('register') }}">Cadastre-se</a></li>
         @endif

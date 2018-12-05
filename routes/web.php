@@ -13,7 +13,8 @@
 
 Route::get('/', 'Site\InicialController@index')->name('inicial');
 Route::get('/evento', 'Site\EventoController@index')->name('evento');
-Route::post('/evento/{query?}', 'Site\EventoController@busca')->name('evento.busca');
+Route::post('/evento', 'Site\EventoController@busca')->name('evento.busca');
+Route::get('/evento/{id}/{nome}', 'Site\EventoController@show')->name('evento.mostrar');
 
 Auth::routes();
 
