@@ -12,6 +12,8 @@
 */
 
 Route::get('/', 'Site\InicialController@index')->name('inicial');
+Route::get('/evento', 'Site\EventoController@index')->name('evento');
+Route::post('/evento/{query?}', 'Site\EventoController@busca')->name('evento.busca');
 
 Auth::routes();
 
