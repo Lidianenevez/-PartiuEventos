@@ -27,7 +27,6 @@ class EventoController extends Controller
 	 */
 	public function index()
 	{
-		Storage::delete('storage\app\public\posts\1\1_20181204_060657.jpeg');
 		$eventos = Evento::where('fk_user_id',Auth::id())->get();
 		return view('admin.evento',compact('eventos'));
 	}
