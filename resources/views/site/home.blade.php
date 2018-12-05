@@ -436,55 +436,39 @@
                   <a data-toggle="collapse" class="collapsed" href="#faq1">O que é o #PartiuEventos? <i class="fa fa-minus-circle"></i></a>
                   <div id="faq1" class="collapse" data-parent="#faq-list">
                     <p>
-                     Somos um grupo que busca informar a todos dentro e fora do Estado sobre quais eventos ocorrem ou vão ocorrer. Além de possibilitar a venda de ingressos e a participação total de usuários comuns (clientes que querem contribuir com críticas ou saudações ).
+                    O #PartiuEventos é uma empresa que busca informar sobre os eventos que estão ocorrendo ou que irão ocorrer, além de possibilitar a venda de ingressos e a participação dos usuários no processo de feedback entre um produtor de eventos e quem participa do evento.
                     </p>
                   </div>
                 </li>
                 
                 <li>
-                  <a data-toggle="collapse" href="#faq2" class="collapsed">Quais as vantagens de divulgar meu evento no #PartiuEventos? <i class="fa fa-minus-circle"></i></a>
+                  <a data-toggle="collapse" href="#faq2" class="collapsed"> Quais as vantagens de divulgar meu evento no #PartiuEventos?<i class="fa fa-minus-circle"></i></a>
                   <div id="faq2" class="collapse" data-parent="#faq-list">
                     <p>
-                      Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                     Aqui no #PartiuEventos é muito fácil que pessoas que estejam em busca de um evento encontrem o seu! É cômodo e bem intuitivo. Contamos com as maiores tecnologias de marketing digital para proporcionar a nossos clientes uma maior interação entre um produtor de eventos e seus respectivos participantes.
                     </p>
                   </div>
                 </li>
                 
                 <li>
-                  <a data-toggle="collapse" href="#faq3" class="collapsed">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="fa fa-minus-circle"></i></a>
+                  <a data-toggle="collapse" href="#faq3" class="collapsed"> Como funciona o sistema de feedback? <i class="fa fa-minus-circle"></i></a>
                   <div id="faq3" class="collapse" data-parent="#faq-list">
                     <p>
-                      Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+                      O feedback funciona de forma a informar a quem produz eventos o que os participantes do evento acharam do mesmo, sendo essa informação fornecida de variadas formas, como, por exemplo, através de votação, de relatórios pós eventos, dentre outras coisas.
                     </p>
                   </div>
                 </li>
                 
                 <li>
-                  <a data-toggle="collapse" href="#faq4" class="collapsed">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="fa fa-minus-circle"></i></a>
+                  <a data-toggle="collapse" href="#faq4" class="collapsed">O que o #PartiuEventos visa para o futuro? <i class="fa fa-minus-circle"></i></a>
                   <div id="faq4" class="collapse" data-parent="#faq-list">
                     <p>
-                      Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+                      Nossa meta é crescer cada dia mais, oferecendo aos nossos clientes ferramentas de marketing atualizadas e que possibilitem que os mesmos possam divulgar seus eventos de forma eficiente. Para isso, temos como objetivo manter o sistema sempre atualizado e pronto para atender as demandas de nossos clientes.
                     </p>
                   </div>
                 </li>
                 
                 <li>
-                  <a data-toggle="collapse" href="#faq5" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="fa fa-minus-circle"></i></a>
-                  <div id="faq5" class="collapse" data-parent="#faq-list">
-                    <p>
-                      Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-                    </p>
-                  </div>
-                </li>
-                
-                <li>
-                  <a data-toggle="collapse" href="#faq6" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="fa fa-minus-circle"></i></a>
-                  <div id="faq6" class="collapse" data-parent="#faq-list">
-                    <p>
-                      Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
-                    </p>
-                  </div>
-                </li>
                 
               </ul>
             </div>
