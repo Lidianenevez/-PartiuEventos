@@ -15,24 +15,41 @@
 		<a href="#" class="google-plus"><i class="btn fa fa-google-plus"></i></a>
 	</div> -->
 
-	<img src="img/logo.jpg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 300px; ">
-
-  <form method='post'>
-    <div class="form-row">
-     <div class="form-group col-md-5">
-      <label class="labelbranca">Nome</label>
-      <input type="text" class="form-control" name='nome' placeholder="Pesquisar por nome" >
-    </div>
-    <div class="form-group col-md-5">
-      <label for="inputCity" class="labelbranca">Cidade</label>
-      <input type="text" class="form-control" name='cidade' id="inputCity" placeholder="Pesquisar por cidade" >
-    </div>
-    <div class="form-group col-md-2">
-      <button class="btn btn3" type="submit" >Procurar <i class="fa fa-search" aria-hidden="true"></i></button>
-    </div>
-  </div>
-  
-</form>
+  <img src="img/logo.jpg" class="rounded-circle img-center img-fluid shadow shadow-lg--hover" style="width: 300px; ">
+    @if (session('msg_danger'))
+      <div class="alert alert-danger">
+        {{ session('msg_danger') }}
+      </div>
+    @endif
+    <form method='post' action="{{ route('evento.busca') }}">
+      @csrf
+      <div class="form-row">
+      <div class="form-group col-md-4">
+        <label class="labelbranca">Nome</label>
+        <input type="text" class="form-control" value="{{ old('nome_evento') }}" name='nome_evento' placeholder="Pesquisar por nome" >
+        @if ($errors->has('nome_evento'))
+          <span class="text-danger" role="alert">
+            <strong>{{ $errors->first('nome_evento') }}</strong>
+          </span>
+        @endif
+      </div>
+      <div class="form-group col-md-2">
+        <label class="labelbranca" for="uf">Estado</label>
+        <select class="form-control" default="AP" id="uf"></select>
+      </div>
+      <div class="form-group col-md-4">
+        <label class="labelbranca" for="cidade">Cidade</label>
+        <select id="cidade" name="cidade" class="form-control"></select>
+        @if ($errors->has('cidade'))
+          <span class="text-danger" role="alert">
+            <strong>{{ $errors->first('cidade') }}</strong>
+          </span>
+        @endif
+      </div>
+      <div class="form-group col-md-2">
+        <button class="btn btn3" type="submit" >Procurar <i class="fa fa-search" aria-hidden="true"></i></button>
+      </div>
+    </form>
 </div>
     </section>
     <main id="main">

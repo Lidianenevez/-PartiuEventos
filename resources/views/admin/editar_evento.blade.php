@@ -3,7 +3,7 @@
 @section('content')
 <section id="speakers-details" style="margin-top:100px" class="wow fadeInUp" >
 	<div class="row justify-content-center">
-		<div class="section-header">
+		<div class="section-header col-md-12">
 			<h2>Insira as informações </h2>
 		</div>
     @if (session('msg_danger'))

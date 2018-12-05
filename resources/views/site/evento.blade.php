@@ -59,12 +59,12 @@
             <img src="{{ asset('storage/posts/'.$e->fk_user_id.'/'.$e->imagem) }}" alt="" class="img-fluid">
             <div class="details">
               <center>
-                <h3><a class="nomeevento" href="speaker-details.html">{{ $e->nome_evento }}</a></h3>
+                <h3><a class="nomeevento" href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}">{{ $e->nome_evento }}</a></h3>
                 <div class="social">
-                  <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i>{{ $e->cidade }}</a>
+                  <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a>
                   <a href=""><i class="fa fa-calendar" aria-hidden="true"></i></a>
                   <a href=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
-                  <a href="" class="btn4">Saiba mais</a>
+                  <a href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}" class="btn4">Saiba mais</a>
                 </div>
               </center>
             </div>

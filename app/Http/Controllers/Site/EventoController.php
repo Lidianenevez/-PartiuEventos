@@ -37,7 +37,20 @@ class EventoController extends Controller
 		if($e) {
 			return view('site.evento', compact('evento'));
 		}
-		return redirect()->back()
-							->with(['msg_danger' => 'Nenhum evento encontrado!']);
+		return redirect()->route('evento')
+											->withInput()
+											->with(['msg_danger' => 'Nenhum evento encontrado!']);
+	}
+
+	/**
+	 * Display the specified resource.
+	 *
+	 * @param  int  $id
+	 * @return \Illuminate\Http\Response
+	 */
+	public function show($id)
+	{
+		$e = Evento::find($id);
+		return view('site.mostrar_evento', compact('e'));
 	}
 }
