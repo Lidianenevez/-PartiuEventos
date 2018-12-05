@@ -17,7 +17,7 @@
           <div class="details">
             <h2>{{ $e->user['name'] }}</h2>
             <p>Data</p>
-            <p>{{ $e->cidade }}</p>
+            <p>{{ $e->city['nome'] }}</p>
             <p>R$ {{ $e->preco }}</p>
             <div class="social">
               <a href=""><i class="fa fa-twitter"></i></a>
