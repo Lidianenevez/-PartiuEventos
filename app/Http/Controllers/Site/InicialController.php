@@ -4,11 +4,13 @@ namespace App\Http\Controllers\Site;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Evento;
 
 class InicialController extends Controller
 {
 	public function index()
 	{
-		return view('site.home');
+		$evento = Evento::all();
+		return view('site.home', compact('evento'));
 	}
 }
