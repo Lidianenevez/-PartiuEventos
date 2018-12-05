@@ -109,7 +109,7 @@
 
           <!-- Schdule Day 1 -->
           <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
-{{-- 
+{{--
             @foreach ($evento as $e)
               <div class="col-lg-4 col-md-6">
                 <div class="speaker">
@@ -145,7 +145,7 @@
                   </div>
                 </div>
               </div> --}}
-            
+
 
             @foreach ($evento as $e)
               <div class="row schedule-item">
@@ -190,8 +190,8 @@
 
     <!--==========================
       icones de estrelas to guardando
-    
-    
+
+
               <div class="stars">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
@@ -199,7 +199,7 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
               </div>
-             
+
               ============================-->
 
     <!--==========================
@@ -222,43 +222,43 @@
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/gallery/Eventos-Academicos.png" class="img-fluid" alt="">
+              <img src="img/gallery/Eventos-Comunitarios.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/gallery/Eventos-Academicos.png" class="img-fluid" alt="">
+              <img src="img/gallery/Eventos-Corporativos.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/gallery/Eventos-Academicos.png" class="img-fluid" alt="">
+              <img src="img/gallery/Eventos-Culturais.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/gallery/Eventos-Academicos.png" class="img-fluid" alt="">
+              <img src="img/gallery/Eventos-Educacionais.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/gallery/Eventos-Academicos.png" class="img-fluid" alt="">
+              <img src="img/gallery/Eventos-Esportivos.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/gallery/Eventos-Academicos.png" class="img-fluid" alt="">
+              <img src="img/gallery/Eventos-Politicos.png" class="img-fluid" alt="">
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/gallery/Eventos-Academicos.png" class="img-fluid" alt="">
+              <img src="img/gallery/Eventos-Sociais.png" class="img-fluid" alt="">
             </div>
           </div>
 
