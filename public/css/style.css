@@ -840,6 +840,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-bottom:1px solid #f82249;
 
 }
+.estrelas input[type=radio]{
+  display: none;
+}.estrelas label i.fa:before{
+  content: '\f005';
+  color: #FC0;
+}.estrelas  input[type=radio]:checked  ~ label i.fa:before{
+  color: #CCC;
+}
 
 #speakers-details .social {
   margin-bottom: 15px;
@@ -1403,18 +1411,24 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #footer .footer-top .footer-info img {
   height: 90px;
-  margin-top: -15px;
+  margin-top: -30px;
 
 }
 
 #footer .footer-top .footer-info p {
   font-size: 14px;
-  line-height: 24px;
+  line-height: 20px;
   margin-bottom: 0;
   font-family: "Raleway", sans-serif;
   color: #fff;
+  text-indent: 20px;
   text-align: justify;
+<<<<<<< HEAD
 
+=======
+  
+  
+>>>>>>> fb3f1ea04fe55a2538047563d9870f3ddbbc34b7
 }
 
 #footer .footer-top .social-links a {

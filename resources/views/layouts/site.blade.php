@@ -93,6 +93,39 @@
     ============================-->
   <footer id="footer">
     <div class="footer-top">
+<<<<<<< HEAD
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-4 col-md-6 footer-info">
+        <center><img src="img/logo.jpg" alt="logo" class="rounded-circle img-center img-fluid shadow shadow-lg--hover"></center>
+        <p>O <b>#PartiuEventos</b> é uma empresa que busca informar sobre os eventos que estão ocorrendo ou que irão ocorrer, além de possibilitar a venda de ingressos e a participação dos usuários no processo de feedback entre um produtor de eventos e quem participa do evento   </p>
+      </div>
+
+      <div class="col-lg-4 col-md-6 footer-links">
+        <h4>Links</h4>
+        <ul>
+          <li><i class="fa fa-angle-right"></i> <a href="#">Inicial</a></li>
+          <li><i class="fa fa-angle-right"></i> <a href="#">Sobre nós</a></li>
+          <li><i class="fa fa-angle-right"></i> <a href="#">Termos de serviço</a></li>
+          <li><i class="fa fa-angle-right"></i> <a href="#">Termos de serviço</a></li>
+        </ul>
+      </div>
+
+
+      <div class="col-lg-4 col-md-6 footer-contact">
+        <h4>Contato</h4>
+          <strong>Telefone:</strong> (96) 0000-0000<br>
+          <strong>E-mail:</strong> partiueventos@gmail.com<br>
+        </p>
+
+        <div class="social-links">
+          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+          <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+          <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+=======
       <div class="container">
         <div class="row">
 
@@ -145,6 +178,7 @@
 
           </div>
 
+>>>>>>> 23de0dd037f1cdc0cfa01334e5f18e004e97b2ca
         </div>
       </div>
     </div>
