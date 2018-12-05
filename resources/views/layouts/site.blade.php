@@ -74,7 +74,7 @@
           <li><a class="linkmenu" href="{{ route('login') }}">Login</a></li>
           <li><a href="{{ route('evento.create') }}" class="about-btn scrollto">Divulgar Evento</a></li>
           @if (Route::has('register'))
-          <li><a class="about-btn scrollto" href="{{ route('register') }}">Cadastre-se</a></li>
+          <li><a class="linkmenu" href="{{ route('register') }}">Cadastre-se</a></li>
           @endif
           @endauth
           @endif
@@ -93,6 +93,7 @@
     ============================-->
   <footer id="footer">
     <div class="footer-top">
+
   <div class="container">
     <div class="row">
 

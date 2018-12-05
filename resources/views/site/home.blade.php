@@ -25,7 +25,7 @@
         <div class="form-row">
           <div class="form-group col-md-4">
             <label class="labelbranca">Nome</label>
-            <input type="text" class="form-control" value="{{ old('nome_evento') }}" name='nome_evento' placeholder="Pesquisar por nome">
+            <input type="text" class="form-control" value="{{ old('nome_evento') }}" name='nome_evento' placeholder="Pesquisar">
             @if ($errors->has('nome_evento'))
             <span class="text-danger" role="alert">
               <strong>{{ $errors->first('nome_evento') }}</strong>
