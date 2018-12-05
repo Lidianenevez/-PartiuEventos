@@ -15,7 +15,7 @@
 
         <div class="col-md-6">
           <div class="details">
-            <h2>Autor {{ $e->fk_user_id }}</h2>
+            <h2>{{ $e->user['name'] }}</h2>
             <p>Data</p>
             <p>{{ $e->cidade }}</p>
             <p>R$ {{ $e->preco }}</p>
