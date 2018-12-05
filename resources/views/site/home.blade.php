@@ -334,37 +334,73 @@
               </div>
              
               ============================-->
+
     <!--==========================
       Categorias
       ============================-->
-      <section id="gallery" class="wow fadeInUp">
+    <section id="sponsors" class="section-with-bg wow fadeInUp">
 
-       <div class="container">
-	<div class="section-header">
-		<h2>Categorias</h2>
-		<p>Check our gallery from the recent events</p>
-	</div>
-</div>
+      <div class="container">
+        <div class="section-header">
+         <h2>categorias</h2>
+        </div>
 
-<div class="owl-carousel gallery-carousel"  id="carouselExampleControls">
-	<a href="img/gallery/1.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/1.jpg" alt=""></a>
-	<a href="img/gallery/2.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/2.jpg" alt=""></a>
-	<a href="img/gallery/3.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/3.jpg" alt=""></a>
-	<a href="img/gallery/4.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/4.jpg" alt=""></a>
-	<a href="img/gallery/5.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/5.jpg" alt=""></a>
-	<a href="img/gallery/6.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/6.jpg" alt=""></a>
-	<a href="img/gallery/7.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/7.jpg" alt=""></a>
-	<a href="img/gallery/8.jpg" class="venobox" data-gall="gallery-carousel"><img src="img/gallery/8.jpg" alt=""></a>
-	 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    
-  </a>
-</div>
+        <div class="row no-gutters sponsors-wrap clearfix">
 
-     </section>
-     
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="sponsor-logo">
+              <img src="img/gallery/Eventos-Academicos.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="sponsor-logo">
+              <img src="img/gallery/Eventos-Academicos.png" class="img-fluid" alt="">
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="sponsor-logo">
+              <img src="img/gallery/Eventos-Academicos.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="sponsor-logo">
+              <img src="img/gallery/Eventos-Academicos.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="sponsor-logo">
+              <img src="img/gallery/Eventos-Academicos.png" class="img-fluid" alt="">
+            </div>
+          </div>
+        
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="sponsor-logo">
+              <img src="img/gallery/Eventos-Academicos.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="sponsor-logo">
+              <img src="img/gallery/Eventos-Academicos.png" class="img-fluid" alt="">
+            </div>
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-xs-6">
+            <div class="sponsor-logo">
+              <img src="img/gallery/Eventos-Academicos.png" class="img-fluid" alt="">
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+   
     <!--==========================
       Perguntas
       ============================-->
@@ -380,16 +416,16 @@
               <ul id="faq-list">
 
                 <li>
-                  <a data-toggle="collapse" class="collapsed" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="fa fa-minus-circle"></i></a>
+                  <a data-toggle="collapse" class="collapsed" href="#faq1">O que é o #PartiuEventos? <i class="fa fa-minus-circle"></i></a>
                   <div id="faq1" class="collapse" data-parent="#faq-list">
                     <p>
-                      Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+                     Somos um grupo que busca informar a todos dentro e fora do Estado sobre quais eventos ocorrem ou vão ocorrer. Além de possibilitar a venda de ingressos e a participação total de usuários comuns (clientes que querem contribuir com críticas ou saudações ).
                     </p>
                   </div>
                 </li>
                 
                 <li>
-                  <a data-toggle="collapse" href="#faq2" class="collapsed">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="fa fa-minus-circle"></i></a>
+                  <a data-toggle="collapse" href="#faq2" class="collapsed">Quais as vantagens de divulgar meu evento no #PartiuEventos? <i class="fa fa-minus-circle"></i></a>
                   <div id="faq2" class="collapse" data-parent="#faq-list">
                     <p>
                       Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
@@ -444,76 +480,6 @@
     <!--==========================
       Planos
       ============================-->
-      <section id="buy-tickets" class="section-with-bg wow fadeInUp">
-      <div class="container">
-          <div class="section-header">
-            <h2>F.A.Q </h2>
-          </div>
-
-          <div class="row justify-content-center">
-            <div class="col-lg-9">
-              <ul id="faq-list">
-
-                <li>
-                  <a data-toggle="collapse" class="collapsed" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="fa fa-minus-circle"></i></a>
-                  <div id="faq1" class="collapse" data-parent="#faq-list">
-                    <p>
-                      Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-                    </p>
-                  </div>
-                </li>
-                
-                <li>
-                  <a data-toggle="collapse" href="#faq2" class="collapsed">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="fa fa-minus-circle"></i></a>
-                  <div id="faq2" class="collapse" data-parent="#faq-list">
-                    <p>
-                      Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                    </p>
-                  </div>
-                </li>
-                
-                <li>
-                  <a data-toggle="collapse" href="#faq3" class="collapsed">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="fa fa-minus-circle"></i></a>
-                  <div id="faq3" class="collapse" data-parent="#faq-list">
-                    <p>
-                      Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-                    </p>
-                  </div>
-                </li>
-                
-                <li>
-                  <a data-toggle="collapse" href="#faq4" class="collapsed">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="fa fa-minus-circle"></i></a>
-                  <div id="faq4" class="collapse" data-parent="#faq-list">
-                    <p>
-                      Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-                    </p>
-                  </div>
-                </li>
-                
-                <li>
-                  <a data-toggle="collapse" href="#faq5" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="fa fa-minus-circle"></i></a>
-                  <div id="faq5" class="collapse" data-parent="#faq-list">
-                    <p>
-                      Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-                    </p>
-                  </div>
-                </li>
-                
-                <li>
-                  <a data-toggle="collapse" href="#faq6" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="fa fa-minus-circle"></i></a>
-                  <div id="faq6" class="collapse" data-parent="#faq-list">
-                    <p>
-                      Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
-                    </p>
-                  </div>
-                </li>
-                
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
-     </section>
+     
 </main>
 @endsection
