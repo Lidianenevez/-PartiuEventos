@@ -197,7 +197,6 @@
                   </center>
                 </div>
               </div>
->>>>>>> 23de0dd037f1cdc0cfa01334e5f18e004e97b2ca
             </div>
           @endforeach
         </div>
