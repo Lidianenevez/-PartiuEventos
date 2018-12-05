@@ -94,43 +94,26 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-lg-3 col-md-6 footer-info">
+      <div class="col-lg-4 col-md-6 footer-info">
         <center><img src="img/logo.jpg" alt="logo" class="rounded-circle img-center img-fluid shadow shadow-lg--hover"></center>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris   </p>
+        <p>O <b>#PartiuEventos</b> é uma empresa que busca informar sobre os eventos que estão ocorrendo ou que irão ocorrer, além de possibilitar a venda de ingressos e a participação dos usuários no processo de feedback entre um produtor de eventos e quem participa do evento   </p>
       </div>
 
-      <div class="col-lg-3 col-md-6 footer-links">
-        <h4>Useful Links</h4>
+      <div class="col-lg-4 col-md-6 footer-links">
+        <h4>Links</h4>
         <ul>
-          <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
-          <li><i class="fa fa-angle-right"></i> <a href="#">About us</a></li>
-          <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
-          <li><i class="fa fa-angle-right"></i> <a href="#">Terms of service</a></li>
-          <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
+          <li><i class="fa fa-angle-right"></i> <a href="#">Inicial</a></li>
+          <li><i class="fa fa-angle-right"></i> <a href="#">Sobre nós</a></li>
+          <li><i class="fa fa-angle-right"></i> <a href="#">Termos de serviço</a></li>
+          <li><i class="fa fa-angle-right"></i> <a href="#">Termos de serviço</a></li>
         </ul>
       </div>
 
-      <div class="col-lg-3 col-md-6 footer-links">
-        <h4>Useful Links</h4>
-        <ul>
-          <li><i class="fa fa-angle-right"></i> <a href="#">Home</a></li>
-          <li><i class="fa fa-angle-right"></i> <a href="#">About us</a></li>
-          <li><i class="fa fa-angle-right"></i> <a href="#">Services</a></li>
-          <li><i class="fa fa-angle-right"></i> <a href="#">Terms of service</a></li>
-          <li><i class="fa fa-angle-right"></i> <a href="#">Privacy policy</a></li>
-        </ul>
-      </div>
 
-      <div class="col-lg-3 col-md-6 footer-contact">
-        <h4>Contact Us</h4>
-        <p>
-          A108 Adam Street <br>
-          New York, NY 535022<br>
-          United States <br>
-          <strong>Phone:</strong> +1 5589 55488 55<br>
-          <strong>Email:</strong> info@example.com<br>
+      <div class="col-lg-4 col-md-6 footer-contact">
+        <h4>Contato</h4>
+          <strong>Telefone:</strong> (96) 0000-0000<br>
+          <strong>E-mail:</strong> partiueventos@gmail.com<br>
         </p>
 
         <div class="social-links">
