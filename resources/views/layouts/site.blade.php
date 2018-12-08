@@ -79,6 +79,7 @@
           </form>
           @else
           <li><a class="linkmenu" href="{{ route('login') }}">Login</a></li>
+          
           <li><a href="{{ route('evento.create') }}" class="about-btn scrollto">Divulgar Evento</a></li>
           @if (Route::has('register'))
           <li><a class="linkmenu" href="{{ route('register') }}">Cadastre-se</a></li>
