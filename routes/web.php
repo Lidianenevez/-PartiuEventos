@@ -18,7 +18,6 @@ Route::get('/evento/{id}/{nome}', 'Site\EventoController@show')->name('evento.mo
 
 Auth::routes();
 
-Route::get('/home', 'Admin\HomeController@index')->name('home');
 Route::resource('admin/evento', 'Admin\EventoController');
 
 
