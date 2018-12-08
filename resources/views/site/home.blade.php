@@ -417,9 +417,9 @@
                   #PartiuEventos?<i class="fa fa-minus-circle"></i></a>
                 <div id="faq2" class="collapse" data-parent="#faq-list">
                   <p>
-                    Aqui no #PartiuEventos é muito fácil que pessoas que estejam em busca de um evento encontrem o seu!
+                    Aqui no #PartiuEventos é muito fácil as pessoas encontrarem  um evento de sua preferencia!
                     É cômodo e bem intuitivo. Contamos com as maiores tecnologias de marketing digital para
-                    proporcionar a nossos clientes uma maior interação entre um produtor de eventos e seus respectivos
+                    proporcionar a nossos clientes uma maior interação entre um produtor de eventos e seus 
                     participantes.
                   </p>
                 </div>
@@ -441,7 +441,7 @@
                     class="fa fa-minus-circle"></i></a>
                 <div id="faq4" class="collapse" data-parent="#faq-list">
                   <p>
-                    Nossa meta é crescer cada dia mais, oferecendo aos nossos clientes ferramentas de marketing
+                    Nossa meta é crescer cada vez mais, oferecendo aos nossos clientes ferramentas de marketing
                     atualizadas e que possibilitem que os mesmos possam divulgar seus eventos de forma eficiente. Para
                     isso, temos como objetivo manter o sistema sempre atualizado e pronto para atender as demandas de
                     nossos clientes.
