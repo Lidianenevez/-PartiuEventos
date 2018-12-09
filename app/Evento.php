@@ -23,4 +23,12 @@ class Evento extends Model
 	{
 		return $this->belongsTo('App\Cidade', 'cidade');
 	}
+
+	/**
+	 * Get the post that owns the comment.
+	 */
+	public function category()
+	{
+		return $this->belongsTo('App\Categoria', 'fk_categoria_id');
+	}
 }

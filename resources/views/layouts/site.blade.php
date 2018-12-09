@@ -71,19 +71,18 @@
           @if (Route::has('login'))
           @auth
           <li><a class="linkmenu" href="{{ route('evento.index') }}">Painel</a></li>
-          <li><a href="{{ route('evento.create') }}" class="about-btn scrollto">Divulgar Evento</a></li>
           <li><a class="linkmenu" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Sair</a></li>
+          <li><a href="{{ route('evento.create') }}" class="about-btn scrollto">Divulgar Evento</a></li>
           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf
           </form>
           @else
-          <li><a class="linkmenu" href="{{ route('login') }}">Login</a></li>
           <li><a class="linkmenu" href="https://goo.gl/forms/hEhNt1CLiMjhdF692" target="blank">Ajude a melhorar</a></li>
-          
-          <li><a href="{{ route('evento.create') }}" class="about-btn scrollto">Divulgar Evento</a></li>
+          <li><a class="linkmenu" href="{{ route('login') }}">Login</a></li>
           @if (Route::has('register'))
           <li><a class="linkmenu" href="{{ route('register') }}">Cadastre-se</a></li>
           @endif
+          <li><a href="{{ route('evento.create') }}" class="about-btn scrollto">Divulgar Evento</a></li>
           @endauth
           @endif
           <!-- <li><a class="linkmenu" data-toggle="modal" data-target="#cadastro">Cadastre-se</a></li>

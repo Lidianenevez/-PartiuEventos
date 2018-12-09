@@ -29,9 +29,9 @@
 						<h3>{{ $e->nome_evento }}</h3>
 						<p>{{ $e->descricao }}</p>
 						<div class="row justify-content-center">
-							<div class="col-md-3">{{ $e->fk_categoria_id }}</div>
-							<div class="col-md-3">{{ $e->preco }}</div>
-							<div class="col-md-3">{{ $e->cidade }}</div>
+							<div class="col-md-3">{{ $e->category['nome_categoria'] }}</div>
+							<div class="col-md-3">R$ {{ $e->preco }}</div>
+							<div class="col-md-3">{{ $e->city['nome'] }}-{{ $e->city['uf'] }}</div>
 							<div class="col-md-3"><img width="100%" src="{{ asset('storage/posts/'.$e->fk_user_id.'/'.$e->imagem) }}" alt="Imagem do evento: {{ $e->nome_evento }}"></div>
 						</div>
 						<div class="row justify-content-center">
