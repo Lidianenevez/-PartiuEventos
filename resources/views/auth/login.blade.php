@@ -12,12 +12,7 @@
 								<div class="text-muted text-center mb-3">
 								</div>
 								<div class="btn-wrapper text-center">
-									<a href="#" class="btn btn-neutral btn-icon">
-										<span class="btn-inner--icon">
-											<img src="img/icon/google.svg">
-										</span>
-										<span class="btn-inner--text">Google</span>
-									</a>
+									<p style="border: 1px solid #f82249; border-radius: 2px; font-size: 20px"><b>Faça seu Login</b></p>
 								</div>
 							</div>
 							<div class="card-body px-lg-5 py-lg-5 cardmodal">
@@ -65,7 +60,10 @@
 											{{ __('Esqueci minha senha?') }}
 											</a>
 										@endif
+
+										<span style="font-size: 15px; color:#fff">{{ __('Não possui uma conta?') }}<a href="{{ route('register') }}" style="style="font-size: 15px;">{{ __('Cadastre-se') }}</a></span>
 									</div>
+
 								</form>
 							</div>
 						</div>

@@ -15,12 +15,7 @@
                         <div class="text-muted text-center mb-3">
                         </div>
                         <div class="btn-wrapper text-center">
-                          <a href="#" class="btn btn-neutral btn-icon">
-                            <span class="btn-inner--icon">
-                              <img src="img/icon/google.svg">
-                            </span>
-                            <span class="btn-inner--text">Google</span>
-                          </a>
+                         <p style="border: 1px solid #f82249; border-radius: 2px; font-size: 20px"><b>Cadastre-se</b></p>
                         </div>
                       </div>
                       <div class="card-body px-lg-5 py-lg-5 cardmodal">
