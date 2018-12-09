@@ -22,7 +22,7 @@
 							</div>
 							<div class="card-body px-lg-5 py-lg-5 cardmodal">
 								<div class="text-center text-muted mb-4">
-									<small class="logintext">{{ __('Login') }}</small>
+									<!--<small class="logintext">{{ __('Login') }}</small>-->
 								</div>
 								<form method="POST" action="{{ route('login') }}">
 									@csrf
@@ -31,7 +31,7 @@
 											<div class="input-group-prepend">
 												<span class="input-group-text"><i class="fa fa-at" aria-hidden="true"></i></span>
 											</div>
-											<input id="email" type="email" placeholder="{{ __('E-Mail Address') }}" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}">
+											<input id="email" type="email" placeholder="{{ __('E-Mail') }}" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}">
 											@if ($errors->has('email'))
 												<span class="invalid-feedback" role="alert">
 													<strong>{{ $errors->first('email') }}</strong>
@@ -44,7 +44,7 @@
 											<div class="input-group-prepend">
 												<span class="input-group-text"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
 											</div>
-											<input id="password" type="password" placeholder="{{ __('Password') }}" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password">
+											<input id="password" type="password" placeholder="{{ __('Senha') }}" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password">
 											@if ($errors->has('password'))
 												<span class="invalid-feedback" role="alert">
 													<strong>{{ $errors->first('password') }}</strong>
@@ -55,14 +55,14 @@
 									<div class="custom-control custom-control-alternative custom-checkbox">
 										<input class="custom-control-input" name="remember" id="customCheckLogin" type="checkbox" {{ old('remember') ? 'checked' : '' }}> 
 										<label class="custom-control-label" for="customCheckLogin">
-											<span>{{ __('Remember Me') }}</span>
+											<span style="color: white">{{ __('Lembrar senha') }}</span>
 										</label>
 									</div>
 									<div class="text-center">
 										<button type="submit" class="btn btn2 my-4">{{ __('Login') }}</button>
 										@if (Route::has('password.request'))
 											<a class="btn btn-link" href="{{ route('password.request') }}">
-											{{ __('Forgot Your Password?') }}
+											{{ __('Esqueci minha senha?') }}
 											</a>
 										@endif
 									</div>

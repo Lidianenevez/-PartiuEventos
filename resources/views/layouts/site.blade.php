@@ -55,7 +55,7 @@
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="linkmenu"><a href="{{ route('inicial') }}">Inicial</a></li>
+          <li class="linkmenu"><a href="{{ route('inicial') }}">Inicio</a></li>
           <li><a href="{{ route('evento') }}">Eventos</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
@@ -79,6 +79,7 @@
           </form>
           @else
           <li><a class="linkmenu" href="{{ route('login') }}">Login</a></li>
+          <li><a class="linkmenu" href="https://goo.gl/forms/hEhNt1CLiMjhdF692" target="blank">Ajude a melhorar</a></li>
           
           <li><a href="{{ route('evento.create') }}" class="about-btn scrollto">Divulgar Evento</a></li>
           @if (Route::has('register'))
@@ -113,7 +114,7 @@
       <div class="col-lg-4 col-md-6 footer-links">
         <h4>Links</h4>
         <ul>
-          <li><i class="fa fa-angle-right"></i> <a href="#">Inicial</a></li>
+          <li><i class="fa fa-angle-right"></i> <a href="#">Inicio</a></li>
           <li><i class="fa fa-angle-right"></i> <a href="#">Sobre nós</a></li>
           <li><i class="fa fa-angle-right"></i> <a href="#">Termos de serviço</a></li>
           <li><i class="fa fa-angle-right"></i> <a href="#">Termos de serviço</a></li>

@@ -25,7 +25,7 @@
                       </div>
                       <div class="card-body px-lg-5 py-lg-5 cardmodal">
                         <div class="text-center text-muted mb-4">
-                          <small class="logintext">{{ __('Register') }}</small>
+                         <!-- <small class="logintext">{{ __('Cadastre-se') }}</small>-->
                         </div>
                         <form method="POST" action="{{ route('register') }}">
 													@csrf
@@ -34,7 +34,7 @@
                               <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fa fa-user-o" aria-hidden="true"></i></span>
                               </div>
-															<input id="name" type="text" placeholder="{{ __('Name') }}" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}">
+															<input id="name" type="text" placeholder="{{ __('Nome') }}" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}">
 															@if ($errors->has('name'))
 																<span class="invalid-feedback" role="alert">
 																	<strong>{{ $errors->first('name') }}</strong>
@@ -47,7 +47,7 @@
                               <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fa fa-at" aria-hidden="true"></i></span>
                               </div>
-															<input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('E-Mail Address') }}" name="email" value="{{ old('email') }}" required>
+															<input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" placeholder="{{ __('E-Mail válido') }}" name="email" value="{{ old('email') }}" required>
 															@if ($errors->has('email'))
 																<span class="invalid-feedback" role="alert">
 																	<strong>{{ $errors->first('email') }}</strong>
@@ -60,7 +60,7 @@
                               <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
                               </div>
-                              <input id="password" type="password" placeholder="{{ __('Password') }}" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                              <input id="password" type="password" placeholder="{{ __('Senha') }}" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 															@if ($errors->has('password'))
 																<span class="invalid-feedback" role="alert">
 																	<strong>{{ $errors->first('password') }}</strong>
@@ -73,17 +73,17 @@
                               <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
                               </div>
-                              <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                              <input id="password-confirm" type="password" placeholder="{{ __(' Confirme a Senha') }}" class="form-control" name="password_confirmation" required>
                             </div>
                           </div>
                           <div class="custom-control custom-control-alternative custom-checkbox">
                             <input class="custom-control-input" id="customCheckRegister" type="checkbox" required>
                             <label class="custom-control-label" for="customCheckRegister">
-                              <span>Eu concordo com a <a href="#" style="color: blue">política de privacidade</a> </span>
+                              <span> <a href="#" style="color: blue">Não sou robô</a> </span>
                             </label>
                           </div>
                           <div class="text-center">
-                            <button type="submit" class="btn btn2 my-4">{{ __('Register') }}</button>
+                            <button type="submit" class="btn btn2 my-4">{{ __('Cadastre-se') }}</button>
                           </div>
                         </form>
                       </div>

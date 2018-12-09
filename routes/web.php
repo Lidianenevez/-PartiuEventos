@@ -29,3 +29,4 @@ Route::get('/ufs/', function($uf = null){
 Route::get('/cidades/{uf}', function($uf = null){
   return response()->json(\Artesaos\Cidade::where('uf', $uf)->orderBy('nome')->get());
 });
+
