@@ -176,7 +176,7 @@
               <a href=""><i class="fa fa-calendar" aria-hidden="true"></i>
               <a href=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
               <a href="" class="btn4">Saiba mais</a>
-=======
+
         <div class="section-header">
           <h2>Eventos em Destaque</h2>
         </div>
@@ -335,49 +335,49 @@
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/gallery/Eventos-Academicos.png" class="img-fluid" alt="">
+              <a href=""><img src="img/gallery/Eventos-Academicos.png" class="img-fluid" alt=""></a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/gallery/Eventos-Comunitarios.png" class="img-fluid" alt="">
+              <a href=""><img src="img/gallery/Eventos-Comunitarios.png" class="img-fluid" alt=""></a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/gallery/Eventos-Corporativos.png" class="img-fluid" alt="">
+              <a href=""><img src="img/gallery/Eventos-Corporativos.png" class="img-fluid" alt=""></a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/gallery/Eventos-Culturais.png" class="img-fluid" alt="">
+              <a href=""><img src="img/gallery/Eventos-Culturais.png" class="img-fluid" alt=""></a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/gallery/Eventos-Educacionais.png" class="img-fluid" alt="">
+              <a href=""><img src="img/gallery/Eventos-Educacionais.png" class="img-fluid" alt=""></a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/gallery/Eventos-Esportivos.png" class="img-fluid" alt="">
+              <a href=""><img src="img/gallery/Eventos-Esportivos.png" class="img-fluid" alt=""></a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/gallery/Eventos-Politicos.png" class="img-fluid" alt="">
+              <a href=""><img src="img/gallery/Eventos-Politicos.png" class="img-fluid" alt=""></a>
             </div>
           </div>
 
           <div class="col-lg-3 col-md-4 col-xs-6">
             <div class="sponsor-logo">
-              <img src="img/gallery/Eventos-Sociais.png" class="img-fluid" alt="">
+              <a href=""><img src="img/gallery/Eventos-Sociais.png" class="img-fluid" alt=""></a>
             </div>
           </div>
 
