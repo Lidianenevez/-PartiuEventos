@@ -44,14 +44,25 @@
           @endif
 	      </div>
       </div>
-      <div class="form-group">
-        <label for="preco">Preço do Evento</label>
-        <input id="preco" type="number" step="0.01" placeholder="Digite o nome do evento" class="form-control" name="preco" value="{{ old('preco') }}">
-        @if ($errors->has('preco'))
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="preco">Preço do Evento (Se o evento for gratís deixe em branco)</label>
+          <input id="preco" type="number" step="0.01" placeholder="Digite o nome do evento" class="form-control" name="preco" value="{{ old('preco') }}">
+          @if ($errors->has('preco'))
           <span class="text-danger" role="alert">
             <strong>{{ $errors->first('preco') }}</strong>
           </span>
-        @endif
+          @endif
+        </div>
+        <div class="form-group col-md-6">
+          <label for="carga_horaria">Carga horaria(opcional)</label>
+          <input id="carga_horaria" type="number" class="form-control" name="carga_horaria" value="{{ old('carga_horaria') }}">
+          @if ($errors->has('carga_horaria'))
+          <span class="text-danger" role="alert">
+            <strong>{{ $errors->first('carga_horaria') }}</strong>
+          </span>
+          @endif
+        </div>
       </div>
       <div class="form-row">
         <div class="form-group col-md-3">
@@ -77,11 +88,49 @@
           @endif
 	      </div>
       </div>
+      <div class="form-row">
+        <div class="form-group col-md-3">
+          <label for="data">Data</label>
+          <input id="data" type="date" class="form-control" name="data" value="{{ old('data') }}">
+          @if ($errors->has('data'))
+          <span class="text-danger" role="alert">
+            <strong>{{ $errors->first('data') }}</strong>
+          </span>
+          @endif
+        </div>
+        <div class="form-group col-md-3">
+          <label for="data_final">Data de término(opcional)</label>
+          <input id="data_final" type="date" class="form-control" name="data_final" value="{{ old('data_final') }}">
+          @if ($errors->has('data_final'))
+          <span class="text-danger" role="alert">
+            <strong>{{ $errors->first('data_final') }}</strong>
+          </span>
+          @endif
+        </div>
+        <div class="form-group col-md-3">
+          <label for="hora">Hora</label>
+          <input id="hora" type="time" class="form-control" name="hora" value="{{ old('hora') }}">
+          @if ($errors->has('hora'))
+          <span class="text-danger" role="alert">
+            <strong>{{ $errors->first('hora') }}</strong>
+          </span>
+          @endif
+        </div>
+        <div class="form-group col-md-3">
+          <label for="hora_final">Hora de término(opcional)</label>
+          <input id="hora_final" type="time" class="form-control" name="hora_final" value="{{ old('hora_final') }}">
+          @if ($errors->has('hora_final'))
+          <span class="text-danger" role="alert">
+            <strong>{{ $errors->first('hora_final') }}</strong>
+          </span>
+          @endif
+        </div>
+      <div>
       <div class="form-group">
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="gridCheck" require>
           <label class="form-check-label" for="gridCheck">
-          Clique em mim
+            Concordo com os termos...
           </label>
         </div>
       </div>

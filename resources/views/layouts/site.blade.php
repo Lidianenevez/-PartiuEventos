@@ -70,8 +70,7 @@
           </li>
           @if (Route::has('login'))
           @auth
-          <li><a class="linkmenu" href="{{ route('home') }}">Home</a></li>
-          <li><a class="linkmenu" href="{{ route('evento.index') }}">Meus eventos</a></li>
+          <li><a class="linkmenu" href="{{ route('evento.index') }}">Painel</a></li>
           <li><a href="{{ route('evento.create') }}" class="about-btn scrollto">Divulgar Evento</a></li>
           <li><a class="linkmenu" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Sair</a></li>
           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Controller;
 use App\Evento;
+use App\DateTime;
 use Auth;
 
 class EventoController extends Controller
@@ -53,8 +54,9 @@ class EventoController extends Controller
 			'descricao' => 'required',
 			'nome_evento' => 'required|max:191',
 			'categoria' => 'required',
-			'preco' => 'required|numeric',
 			'cidade' => 'required',
+			'data' => 'required',
+			'hora' => 'required',
 			'imagem' => 'image|dimensions:max_width=1000,max_height=1000',
 		]);
 		$e = new Evento;
@@ -75,8 +77,16 @@ class EventoController extends Controller
 									->with('msg_danger','Falha ao fazer o upload da imagem!');
 		}
 		$e->save();
+		$dt = new DateTime;
+		$dt->fk_evento_id = $e->id;
+		$dt->data_inicio = $request->data;
+		$dt->data_final = $request->data_final;
+		$dt->hora_inicio = $request->hora;
+		$dt->hora_final = $request->hora_final;
+		$dt->carga_horaria = $request->carga_horaria;
+		$dt->save();
 		return redirect()
-					->route('home')
+					->route('evento.index')
 						->with('msg_success','Você criou um evento com sucesso!');
 	}
 
@@ -134,10 +144,10 @@ class EventoController extends Controller
 		$e->fk_categoria_id = $request->categoria;
 		if($e->fk_user_id == Auth::id()){
 			$e->save();
-			return redirect()->route('home')
+			return redirect()->route('evento.index')
 							->with('msg_success','Você atualizou o seu evento!');	
 		}
-		return redirect()->route('home')
+		return redirect()->route('evento.index')
 							->with('msg_danger','Você não tem permissão para atualizar este evento!');	
 	}
 
@@ -152,10 +162,10 @@ class EventoController extends Controller
 		$e = Evento::find($id);
 		if($e->fk_user_id == Auth::id()){
 			$e->delete();
-			return redirect()->route('home')
+			return redirect()->route('evento.index')
 							->with('msg_success','Você excluiu o seu evento!');	
 		}
-		return redirect()->route('home')
+		return redirect()->route('evento.index')
 					->with('msg_danger','Você não tem permissão para excluir este evento! Denucie o evento para a admininstração do sistema.');
 	}
 }
