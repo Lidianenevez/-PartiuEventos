@@ -12,7 +12,7 @@
         <div class="section-header">
           <h2>{{ $e->nome_evento }}</h2>
         </div>
-
+        
         <div class="row">
           <div class="col-md-6">
              <img src="{{ asset('storage/posts/'.$e->fk_user_id.'/'.$e->imagem) }}" alt="banner evento" class="img-fluid">
