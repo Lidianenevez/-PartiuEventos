@@ -20,8 +20,6 @@ class CreateDatetimeEventosTable extends Migration
 			$table->time('hora_inicio');
 			$table->time('hora_final')->nullable();
 			$table->integer('carga_horaria')->nullable();
-			$table->unsignedInteger('fk_evento_id');
-			$table->foreign('fk_evento_id')->references('id')->on('evento');
 		});
 	}
 

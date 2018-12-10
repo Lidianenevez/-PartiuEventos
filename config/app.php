@@ -227,8 +227,6 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
-        'GMaps' => FarhanWazir\GoogleMaps\Facades\GMapsFacade::class,
 
     ],
-
 ];

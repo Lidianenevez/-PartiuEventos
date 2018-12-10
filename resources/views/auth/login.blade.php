@@ -47,6 +47,7 @@
 											@endif
 										</div>
 									</div>
+									{!! NoCaptcha::display() !!}
 									<div class="custom-control custom-control-alternative custom-checkbox">
 										<input class="custom-control-input" name="remember" id="customCheckLogin" type="checkbox" {{ old('remember') ? 'checked' : '' }}> 
 										<label class="custom-control-label" for="customCheckLogin">
@@ -54,7 +55,6 @@
 										</label>
 									</div>
 									<div class="text-center">
-										{!! NoCaptcha::display() !!}
 										<button type="submit" class="btn btn2 my-4">{{ __('Login') }}</button>
 										@if (Route::has('password.request'))
 											<a class="btn btn-link" href="{{ route('password.request') }}">
