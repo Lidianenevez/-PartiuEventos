@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Site;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Evento;
+use App\Categoria;
 
 class EventoController extends Controller
 {
@@ -16,7 +17,8 @@ class EventoController extends Controller
 	public function index()
 	{
 		$evento = Evento::all();
-		return view('site.evento', compact('evento'));
+		$categoria = Categoria::all();
+		return view('site.evento', compact('evento', 'categoria'));
 	}
 
 	/**
@@ -28,14 +30,37 @@ class EventoController extends Controller
 	public function busca(Request $request)
 	{
 		$validatedData = $request->validate([
-			'nome_evento' => 'required',
-			'cidade' => 'required',
+			
 		]);
-		$evento = Evento::where('cidade', $request->cidade)
-										->where('nome_evento', 'like', '%'.$request->nome_evento.'%')->get();
+		if ($request->data) {
+			$evento = Evento::orWhere('cidade', $request->cidade)
+			->join('datetime_eventos', function ($join) {
+				$join->on('datetime_eventos.id', '=', 'evento.fk_datetime_id')
+				->orWhere('data_inicio', $request->data);
+			})
+			->orWhere('fk_categoria_id', $request->categoria)
+			->orWhere('nome_evento', 'like', '%'.$request->nome_evento.'%')->get();
+		}
+		elseif ($request->hora) {
+			$evento = Evento::orWhere('cidade', $request->cidade)
+			->join('datetime_eventos', function ($join) {
+				$join->on('datetime_eventos.id', '=', 'evento.fk_datetime_id')
+				->orWhere('hora_inicio', $request->hora);
+			})
+			->orWhere('fk_categoria_id', $request->categoria)
+			->orWhere('nome_evento', 'like', '%'.$request->nome_evento.'%')->get();
+		}
+		elseif ($request->nome_evento) {
+			$evento = Evento::where('nome_evento', 'like', '%'.$request->nome_evento.'%')->get();
+		}
+		else {
+			$evento = Evento::orWhere('cidade', $request->cidade)
+			->orWhere('fk_categoria_id', $request->categoria)->get();
+		}
 		$e = $evento->count();
 		if($e) {
-			return view('site.evento', compact('evento'));
+			$categoria = Categoria::all();
+			return view('site.evento', compact('evento', 'categoria'));
 		}
 		return redirect()->route('evento')
 											->withInput()
