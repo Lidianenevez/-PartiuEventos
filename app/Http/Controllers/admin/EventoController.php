@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Controller;
 use App\Evento;
 use App\DateTime;
+use App\Categoria;
 use Auth;
 
 class EventoController extends Controller
@@ -39,7 +40,8 @@ class EventoController extends Controller
 	 */
 	public function create()
 	{
-		return view('admin.novo_evento');
+		$categoria = Categoria::all();
+		return view('admin.novo_evento', compact('categoria'));
 	}
 
 	/**
@@ -110,7 +112,8 @@ class EventoController extends Controller
 	public function edit($id)
 	{
 		$e = Evento::find($id);
-		return view('admin.editar_evento', compact('e'));
+		$categoria = Categoria::all();
+		return view('admin.editar_evento', compact('e', 'categoria'));
 	}
 
 	/**

@@ -36,7 +36,10 @@
         <div class="form-group col-md-5">
 	        <label for="categoria">Categoria do Evento</label>
           <select class="form-control" id="categoria" name="categoria">
-            <option value='1'>s</option>
+            <option selected>escolher</option>
+            @foreach ($categoria as $c)
+              <option value="{{ $c->id }}">{{ $c->nome_categoria }}</option>
+            @endforeach
           </select>
           @if ($errors->has('categoria'))
             <span class="text-danger" role="alert">

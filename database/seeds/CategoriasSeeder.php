@@ -12,16 +12,28 @@ class CategoriasSeeder extends Seeder
 	public function run()
 	{
 		DB::table('categoria')->insert([
-			'nome_categoria' => 'Show',
+			'nome_categoria' => 'Acadêmicos',
 		]);
 		DB::table('categoria')->insert([
-			'nome_categoria' => 'Curso',
+			'nome_categoria' => 'Comunitários',
 		]);
 		DB::table('categoria')->insert([
-			'nome_categoria' => 'Palestra',
+			'nome_categoria' => 'Corporativos',
 		]);
 		DB::table('categoria')->insert([
-			'nome_categoria' => 'Workshop',
+			'nome_categoria' => 'Culturais',
+		]);
+		DB::table('categoria')->insert([
+			'nome_categoria' => 'Educionais',
+		]);
+		DB::table('categoria')->insert([
+			'nome_categoria' => 'Esportivos',
+		]);
+		DB::table('categoria')->insert([
+			'nome_categoria' => 'Políticos',
+		]);
+		DB::table('categoria')->insert([
+			'nome_categoria' => 'Sociais',
 		]);
 	}
 }

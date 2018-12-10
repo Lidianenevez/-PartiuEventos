@@ -26,10 +26,10 @@
         <div class="form-group col-md-6">
 	        <label for="categoria">Categoria do Evento</label>
           <select class="form-control" id="categoria" name="categoria">
-           <option selected>escolher</option>
-           <option value="1">One</option>
-            <option value="2">Two</option>
-           <option value="3">Three</option>
+            <option selected>escolher</option>
+            @foreach ($categoria as $c)
+              <option value="{{ $c->id }}">{{ $c->nome_categoria }}</option>
+            @endforeach
           </select>
           @if ($errors->has('categoria'))
             <span class="text-danger" role="alert">
