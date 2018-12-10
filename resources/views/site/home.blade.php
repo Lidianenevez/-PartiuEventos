@@ -58,125 +58,6 @@
       ============================-->
     <section id="speakers" class="wow fadeInUp">
       <div class="container">
-  <div class="section-header">
-    <h2>Eventos em Destaque</h2>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-4 col-md-6">
-      <div class="speaker">
-        <img src="img/speakers/5.jpg" alt="Speaker 1" class="img-fluid">
-        <div class="details">
-          <center>
-            <h3><a class="nomeevento" href="speaker-details.html">nomeevento</a></h3>
-            <form method="POST" action="processa.php" enctype="multipart/form-data">
-      <div class="estrelas">
-        <input type="radio" id="vazio" name="estrela" value="" checked>
-
-        <label for="estrela_um"><i class="fa"></i></label>
-        <input type="radio" id="estrela_um" name="estrela" value="1">
-
-        <label for="estrela_dois"><i class="fa"></i></label>
-        <input type="radio" id="estrela_dois" name="estrela" value="2">
-
-        <label for="estrela_tres"><i class="fa"></i></label>
-        <input type="radio" id="estrela_tres" name="estrela" value="3">
-
-        <label for="estrela_quatro"><i class="fa"></i></label>
-        <input type="radio" id="estrela_quatro" name="estrela" value="4">
-
-        <label for="estrela_cinco"><i class="fa"></i></label>
-        <input type="radio" id="estrela_cinco" name="estrela" value="5">
-
-      </div>
-    </form>
-            <div class="social">
-
-              <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a>
-              <a href=""><i class="fa fa-calendar" aria-hidden="true"></i>
-              <a href=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
-              <a href="" class="btn4">Saiba mais</a>
-            </div>
-          </center>
-        </div>
-    </div>
-  </div>
-    <div class="col-lg-4 col-md-6">
-      <div class="speaker">
-        <img src="img/speakers/2.jpg" alt="Speaker 2" class="img-fluid">
-        <div class="details">
-          <center>
-            <h3><a class="nomeevento" href="speaker-details.html">nomeevento</a></h3>
-            <div class="social">
-              <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a>
-              <a href=""><i class="fa fa-calendar" aria-hidden="true"></i>
-              <a href=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
-              <a href="" class="btn4">Saiba mais</a>
-            </div>
-          </center>
-        </div>
-    </div>
-  </div>
-    <div class="col-lg-4 col-md-6">
-      <div class="speaker">
-        <img src="img/speakers/3.jpg" alt="Speaker 3" class="img-fluid">
-       <div class="details">
-          <center>
-            <h3><a class="nomeevento" href="speaker-details.html">nomeevento</a></h3>
-            <div class="social">
-              <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a>
-              <a href=""><i class="fa fa-calendar" aria-hidden="true"></i>
-              <a href=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
-              <a href="" class="btn4">Saiba mais</a>
-            </div>
-          </center>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6">
-      <div class="speaker">
-        <img src="img/speakers/4.jpg" alt="Speaker 4" class="img-fluid">
-        <div class="details">
-          <center>
-            <h3><a class="nomeevento" href="speaker-details.html">nomeevento</a></h3>
-            <div class="social">
-              <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a>
-              <a href=""><i class="fa fa-calendar" aria-hidden="true"></i>
-              <a href=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
-              <a href="" class="btn4">Saiba mais</a>
-            </div>
-          </center>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6">
-      <div class="speaker">
-        <img src="img/speakers/1.jpg" alt="Speaker 5" class="img-fluid">
-        <div class="details">
-          <center>
-            <h3><a class="nomeevento" href="speaker-details.html">nomeevento</a></h3>
-            <div class="social">
-              <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a>
-              <a href=""><i class="fa fa-calendar" aria-hidden="true"></i>
-              <a href=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
-              <a href="" class="btn4">Saiba mais</a>
-            </div>
-          </center>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6">
-      <div class="speaker">
-        <img src="img/speakers/6.jpg" alt="Speaker 6" class="img-fluid">
-        <div class="details">
-          <center>
-            <h3><a class="nomeevento" href="speaker-details.html">nomeevento</a></h3>
-            <div class="social">
-              <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a>
-              <a href=""><i class="fa fa-calendar" aria-hidden="true"></i>
-              <a href=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
-              <a href="" class="btn4">Saiba mais</a>
-
         <div class="section-header">
           <h2>Eventos em Destaque</h2>
         </div>
@@ -189,9 +70,9 @@
                   <center>
                     <h3><a class="nomeevento" href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}">{{ $e->nome_evento }}</a></h3>
                     <div class="social">
-                      <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a>
-                      <a href=""><i class="fa fa-calendar" aria-hidden="true"></i>
-                      <a href=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                      <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+                      <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-calendar" aria-hidden="true"></i>
+                       <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-clock-o" aria-hidden="true"></i></a>
                       <a href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}" class="btn4">Saiba mais</a>
                     </div>
                   </center>
@@ -199,7 +80,107 @@
               </div>
             </div>
           @endforeach
-        </div>
+        
+
+        @foreach ($evento as $e)
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img src="{{ asset('storage/posts/'.$e->fk_user_id.'/'.$e->imagem) }}" alt="" class="img-fluid">
+                <div class="details">
+                  <center>
+                    <h3><a class="nomeevento" href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}">{{ $e->nome_evento }}</a></h3>
+                    <div class="social">
+                      <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+                      <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-calendar" aria-hidden="true"></i>
+                       <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                      <a href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}" class="btn4">Saiba mais</a>
+                    </div>
+                  </center>
+                </div>
+              </div>
+            </div>
+          @endforeach
+        
+
+        @foreach ($evento as $e)
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img src="{{ asset('storage/posts/'.$e->fk_user_id.'/'.$e->imagem) }}" alt="" class="img-fluid">
+                <div class="details">
+                  <center>
+                    <h3><a class="nomeevento" href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}">{{ $e->nome_evento }}</a></h3>
+                    <div class="social">
+                      <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+                      <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-calendar" aria-hidden="true"></i>
+                       <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                      <a href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}" class="btn4">Saiba mais</a>
+                    </div>
+                  </center>
+                </div>
+              </div>
+            </div>
+          @endforeach
+        
+
+        @foreach ($evento as $e)
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img src="{{ asset('storage/posts/'.$e->fk_user_id.'/'.$e->imagem) }}" alt="" class="img-fluid">
+                <div class="details">
+                  <center>
+                    <h3><a class="nomeevento" href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}">{{ $e->nome_evento }}</a></h3>
+                    <div class="social">
+                      <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+                      <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-calendar" aria-hidden="true"></i>
+                       <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                      <a href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}" class="btn4">Saiba mais</a>
+                    </div>
+                  </center>
+                </div>
+              </div>
+            </div>
+          @endforeach
+        
+
+        @foreach ($evento as $e)
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img src="{{ asset('storage/posts/'.$e->fk_user_id.'/'.$e->imagem) }}" alt="" class="img-fluid">
+                <div class="details">
+                  <center>
+                    <h3><a class="nomeevento" href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}">{{ $e->nome_evento }}</a></h3>
+                    <div class="social">
+                      <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+                      <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-calendar" aria-hidden="true"></i>
+                       <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                      <a href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}" class="btn4">Saiba mais</a>
+                    </div>
+                  </center>
+                </div>
+              </div>
+            </div>
+          @endforeach
+
+           @foreach ($evento as $e)
+            <div class="col-lg-4 col-md-6">
+              <div class="speaker">
+                <img src="{{ asset('storage/posts/'.$e->fk_user_id.'/'.$e->imagem) }}" alt="" class="img-fluid">
+                <div class="details">
+                  <center>
+                    <h3><a class="nomeevento" href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}">{{ $e->nome_evento }}</a></h3>
+                    <div class="social">
+                      <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+                      <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-calendar" aria-hidden="true"></i>
+                       <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                      <a href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}" class="btn4">Saiba mais</a>
+                    </div>
+                  </center>
+                </div>
+              </div>
+            </div>
+          @endforeach
+     
+     
       </div>
     </section>
 
@@ -227,75 +208,127 @@
         <div class="tab-content row justify-content-center">
 
           <!-- Schdule Day 1 -->
-          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
-{{--
+           
+          <div role="tabpanel" class="col-lg-6 tab-pane fade show active" id="day-1">
+
             @foreach ($evento as $e)
-              <div class="col-lg-4 col-md-6">
-                <div class="speaker">
-                  <img src="{{ asset('storage/posts/'.$e->fk_user_id.'/'.$e->imagem) }}" alt="" class="img-fluid">
-                  <div class="details">
-                    <center>
-                      <h3><a class="nomeevento" href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}">{{ $e->nome_evento }}</a></h3>
-                      <div class="social">
-                        <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a>
-                        <a href=""><i class="fa fa-calendar" aria-hidden="true"></i>
-                        <a href=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
-                        <a href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}" class="btn4">Saiba mais</a>
-                      </div>
-                    </center>
-                  </div>
+             <center>
+              <div class="row schedule-item">
+                <div class="col-md-4">
+                  <div class="social">
+                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-map-marker"  style="color: #f82249" aria-hidden="true"></i></a>
+                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-calendar"  style="color: #f82249" aria-hidden="true"></i>
+                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-clock-o"  style="color: #f82249"aria-hidden="true"></i></a>
                 </div>
               </div>
-            @endforeach
-
-              <div class="col-lg-4 col-md-6">
-                <div class="speaker">
-                  <img src="{{ asset('storage/posts/'.$e->fk_user_id.'/'.$e->imagem) }}" alt="" class="img-fluid">
-                  <div class="details">
-                    <center>
-                      <h3><a class="nomeevento" href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}">{{ $e->nome_evento }}</a></h3>
-                      <div class="social">
-                        <a href=""><i class="fa fa-map-marker" aria-hidden="true"></i></a>
-                        <a href=""><i class="fa fa-calendar" aria-hidden="true"></i>
-                        <a href=""><i class="fa fa-clock-o" aria-hidden="true"></i></a>
-                        <a href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}" class="btn4">Saiba mais</a>
-                      </div>
-                    </center>
-                  </div>
+                <div class="col-md-8">
+                  <h4> Evento: {{ $e->nome_evento }} </h4>
+                   <a href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}" class="btn5">Saiba mais</a>
                 </div>
-              </div> --}}
+              </div>
+                 </center>
+            @endforeach
+         
 
-
+            <center>
             @foreach ($evento as $e)
               <div class="row schedule-item">
-                <div class="col-md-2"><time>10:00 AM</time></div>
-                <div class="col-md-10">
-                  <div class="speaker">
-                    <img src="{{ asset('storage/posts/'.$e->fk_user_id.'/'.$e->imagem) }}" alt="{{ $e->nome_evento }}">
-                  </div>
-                  <h4>{{ $e->city['nome'] }} <span>{{ $e->nome_evento }}</span></h4>
-                  <p>{{ $e->descricao }}</p>
-                  <p>{{ $e->user['name'] }}</p>
+                <div class="col-md-4">
+                  <div class="social">
+                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-map-marker"  style="color: #f82249" aria-hidden="true"></i></a>
+                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-calendar"  style="color: #f82249" aria-hidden="true"></i>
+                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-clock-o"  style="color: #f82249"aria-hidden="true"></i></a>
+                </div>
+              </div>
+                <div class="col-md-8">
+                  <h4> Evento: {{ $e->nome_evento }} </h4>
+                   <a href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}" class="btn5">Saiba mais</a>
                 </div>
               </div>
             @endforeach
+            </center>
+
+            <center>
+            @foreach ($evento as $e)
+              <div class="row schedule-item">
+                <div class="col-md-4">
+                  <div class="social">
+                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-map-marker"  style="color: #f82249" aria-hidden="true"></i></a>
+                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-calendar"  style="color: #f82249" aria-hidden="true"></i>
+                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-clock-o"  style="color: #f82249"aria-hidden="true"></i></a>
+                </div>
+              </div>
+                <div class="col-md-8">
+                  <h4> Evento: {{ $e->nome_evento }} </h4>
+                   <a href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}" class="btn5">Saiba mais</a>
+                </div>
+              </div>
+            @endforeach
+            </center>
 
           </div>
+
           <!-- End Schdule Day 1 -->
 
           <!-- Schdule Day 2 -->
           <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
 
-            <div class="row schedule-item">
-              <div class="col-md-2"><time>10:00 AM</time></div>
-              <div class="col-md-10">
-                <div class="speaker">
-                  <img src="img/speakers/1.jpg" alt="Brenden Legros">
+             @foreach ($evento as $e)
+             <center>
+              <div class="row schedule-item">
+                <div class="col-md-4">
+                  <div class="social">
+                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-map-marker"  style="color: #f82249" aria-hidden="true"></i></a>
+                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-calendar"  style="color: #f82249" aria-hidden="true"></i>
+                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-clock-o"  style="color: #f82249"aria-hidden="true"></i></a>
                 </div>
-                <h4>Libero corrupti explicabo itaque. <span>Brenden Legros</span></h4>
-                <p>Facere provident incidunt quos voluptas.</p>
               </div>
-            </div>
+                <div class="col-md-8">
+                  <h4> Evento: {{ $e->nome_evento }} </h4>
+                   <a href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}" class="btn5">Saiba mais</a>
+                </div>
+              </div>
+                 </center>
+            @endforeach
+         
+
+            <center>
+            @foreach ($evento as $e)
+              <div class="row schedule-item">
+                <div class="col-md-4">
+                  <div class="social">
+                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-map-marker"  style="color: #f82249" aria-hidden="true"></i></a>
+                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-calendar"  style="color: #f82249" aria-hidden="true"></i>
+                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-clock-o"  style="color: #f82249"aria-hidden="true"></i></a>
+                </div>
+              </div>
+                <div class="col-md-8">
+                  <h4> Evento: {{ $e->nome_evento }} </h4>
+                   <a href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}" class="btn5">Saiba mais</a>
+                </div>
+              </div>
+            @endforeach
+            </center>
+
+            <center>
+            @foreach ($evento as $e)
+              <div class="row schedule-item">
+                <div class="col-md-4">
+                  <div class="social">
+                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-map-marker"  style="color: #f82249" aria-hidden="true"></i></a>
+                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-calendar"  style="color: #f82249" aria-hidden="true"></i>
+                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-clock-o"  style="color: #f82249"aria-hidden="true"></i></a>
+                </div>
+              </div>
+                <div class="col-md-8">
+                  <h4> Evento: {{ $e->nome_evento }} </h4>
+                   <a href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}" class="btn5">Saiba mais</a>
+                </div>
+              </div>
+            @endforeach
+            </center>
+
+         
 
           </div>
           <!-- End Schdule Day 2 -->

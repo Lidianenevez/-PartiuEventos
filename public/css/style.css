@@ -408,6 +408,20 @@ h6 {
     margin-top: -2px
 
 }
+.btn5{
+    color: #000;
+    background: #fff ;
+    border: 2px solid  #f82249;
+    border-radius: 5px;
+    transition: all ease-in-out 0.3s;
+    font-weight:bold;
+    box-shadow: 3px rgb(252, 3, 91);
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 5px;
+
+}
 .labelbranca{
   color: #fff;
 }
@@ -980,7 +994,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #152b79;
   margin-bottom: 0;
 }
-
+#schedule .schedule-item .social {
+  font-size: 25px;
+  color: #f82249;
+  margin: 5px;
+}
 /*--------------------------------------------------------------
 # Venue Section
 --------------------------------------------------------------*/
