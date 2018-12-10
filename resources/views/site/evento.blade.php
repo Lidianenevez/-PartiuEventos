@@ -4,7 +4,11 @@
 <main id="main" class="main-page">
   <section id="speakers" class="wow fadeInUp">
     <div class="container">
-
+      @if (session('msg_danger'))
+        <div class="alert alert-danger">
+          {{ session('msg_danger') }}
+        </div>
+      @endif
       <p>
         <button class="btn5" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
           Filtrar
@@ -28,8 +32,10 @@
               <div class="form-group col-md-4">
                 <label for="categoria">Categoria</label>
                 <select class="form-control" id="categoria" name="categoria">
-                  <option value='1'>s</option>
-                  <option value='1'>s</option>
+                  <option value="">escolher</option>
+                  @foreach ($categoria as $c)
+                    <option value="{{ $c->id }}">{{ $c->nome_categoria }}</option>
+                  @endforeach
                 </select>
                 @if ($errors->has('categoria'))
                 <span class="text-danger" role="alert">
