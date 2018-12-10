@@ -71,7 +71,7 @@
           @if (Route::has('login'))
           @auth
           <li><a class="linkmenu" href="{{ route('evento.index') }}">Painel</a></li>
-          <li><a class="linkmenu" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Sair</a></li>
+          <li><a class="linkmenu" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-user-o" aria-hidden="true"></i> Sair</a></li>
           <li><a href="{{ route('evento.create') }}" class="about-btn scrollto">Divulgar Evento</a></li>
           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf
