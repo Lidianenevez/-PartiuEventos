@@ -12,16 +12,7 @@
 		  </div>
 		@endif
     <form method="POST" class="col-md-8" action="{{ route('evento.store') }}" enctype="multipart/form-data">
-			@csrf
-      <div class="form-group">
-        <label for="descricao">Descrição do Evento</label>
-        <textarea name="descricao" placeholder="Digite a descrição do evento" id="descricao" cols="30" rows="10" class="form-control">{{ old('descricao') }}</textarea>
-        @if ($errors->has('descricao'))
-          <span class="text-danger" role="alert">
-            <strong>{{ $errors->first('descricao') }}</strong>
-          </span>
-        @endif
-      </div>
+		
       <div class="form-row">
 	      <div class="form-group col-md-7">
 	        <label for="nome_evento">Nome do Evento</label>
@@ -84,6 +75,7 @@
           @if ($errors->has('imagem'))
             <span class="text-danger" role="alert">
               <strong>{{ $errors->first('imagem') }}</strong>
+              <i class="fa fa-file-o" aria-hidden="true"></i>
             </span>
           @endif
 	      </div>
@@ -125,6 +117,17 @@
           </span>
           @endif
         </div>
+
+          @csrf
+      <div class="form-group">
+        <label for="descricao">Descrição do Evento</label>
+        <textarea name="descricao" placeholder="Digite a descrição do evento" id="descricao" cols="30" rows="10" class="form-control">{{ old('descricao') }}</textarea>
+        @if ($errors->has('descricao'))
+          <span class="text-danger" role="alert">
+            <strong>{{ $errors->first('descricao') }}</strong>
+          </span>
+        @endif
+      </div>
       <div>
       <div class="form-group">
         <div class="form-check">
