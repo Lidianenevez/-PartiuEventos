@@ -64,7 +64,11 @@
             <li><a href="{{ route('evento.create') }}" class="linkmenu">Criar Evento</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+<<<<<<< HEAD
+              aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-o" aria-hidden="true" style="color: #f82249"></i> {{ auth::user()->name }}
+=======
               aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-o" aria-hidden="true" style="color: #f82249"></i> {{ Auth::user()->name }}
+>>>>>>> 3f94224429c9990eabd64b1b122fe230cb90ffbb
             </a>
             <div class="dropdown-menu">
               <a href="{{ route('evento.index') }}" class="dropdown-item" >Meus Eventos</a>

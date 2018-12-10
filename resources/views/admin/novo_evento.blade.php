@@ -11,10 +11,10 @@
 				{{ session('msg_danger') }}
 		  </div>
 		@endif
-    <form method="POST" class="col-md-8" action="{{ route('evento.store') }}" enctype="multipart/form-data">
+    <form method="POST" class="col-md-10" action="{{ route('evento.store') }}" enctype="multipart/form-data">
 		
       <div class="form-row">
-	      <div class="form-group col-md-7">
+	      <div class="form-group col-md-6">
 	        <label for="nome_evento">Nome do Evento</label>
           <input id="nome_evento" type="text" placeholder="Digite o nome do evento" class="form-control" name="nome_evento" value="{{ old('nome_evento') }}">
           @if ($errors->has('nome_evento'))
@@ -23,10 +23,13 @@
             </span>
           @endif
 	      </div>
-        <div class="form-group col-md-5">
+        <div class="form-group col-md-6">
 	        <label for="categoria">Categoria do Evento</label>
           <select class="form-control" id="categoria" name="categoria">
-            <option value='1'>s</option>
+           <option selected>escolher</option>
+           <option value="1">One</option>
+            <option value="2">Two</option>
+           <option value="3">Three</option>
           </select>
           @if ($errors->has('categoria'))
             <span class="text-danger" role="alert">
@@ -35,18 +38,10 @@
           @endif
 	      </div>
       </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="preco">Preço do Evento (Se o evento for gratís deixe em branco)</label>
-          <input id="preco" type="number" step="0.01" placeholder="Digite o nome do evento" class="form-control" name="preco" value="{{ old('preco') }}">
-          @if ($errors->has('preco'))
-          <span class="text-danger" role="alert">
-            <strong>{{ $errors->first('preco') }}</strong>
-          </span>
-          @endif
-        </div>
-        <div class="form-group col-md-6">
-          <label for="carga_horaria">Carga horaria(opcional)</label>
+      
+        <div class="form-row">
+        <div class="form-group col-md-4">
+          <label for="carga_horaria">Carga horaria</label>
           <input id="carga_horaria" type="number" class="form-control" name="carga_horaria" value="{{ old('carga_horaria') }}">
           @if ($errors->has('carga_horaria'))
           <span class="text-danger" role="alert">
@@ -54,8 +49,6 @@
           </span>
           @endif
         </div>
-      </div>
-      <div class="form-row">
         <div class="form-group col-md-3">
           <label for="uf">Estado</label>
           <select class="form-control" default="AP" id="uf"></select>
@@ -69,17 +62,9 @@
             </span>
           @endif
         </div>
-        <div class="form-group col-md-4">
-	        <label for="imagem">Arte do Evento</label>
-          <input id="imagem" type="file" placeholder="Digite o nome do evento" class="form-control" name="imagem">
-          @if ($errors->has('imagem'))
-            <span class="text-danger" role="alert">
-              <strong>{{ $errors->first('imagem') }}</strong>
-              <i class="fa fa-file-o" aria-hidden="true"></i>
-            </span>
-          @endif
-	      </div>
       </div>
+
+
       <div class="form-row">
         <div class="form-group col-md-3">
           <label for="data">Data</label>
@@ -118,8 +103,51 @@
           @endif
         </div>
 
+
+        <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="exampleFormControlFile1">Arte do Evento</label>
+          <input  type="file" class="form-control-file" id="imagem" name="imagem">
+          @if ($errors->has('imagem'))
+            <span class="text-danger" role="alert">
+              <strong>{{ $errors->first('imagem') }}</strong>
+            </span>
+          @endif
+        </div>
+        
+        <div class="form-group col-md-6">
+          Tipo de evento: 
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+            <label class="form-check-label" for="exampleRadios1">
+             Gratuito
+           </label>
+          </div>
+
+        <div class="form-check"> 
+          <label class="form-check-label" for="exampleRadios2" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">Pago</label>
+          
+          <div class="collapse" id="collapseExample">
+           <div class="card card-body">
+   
+          <label for="preco">Preço do Evento</label>
+           <input id="preco" type="number" step="0.01" placeholder="Valor" class="form-control" name="preco" value="{{ old('preco') }}">
+          @if ($errors->has('preco'))
+          <span class="text-danger" role="alert">
+            <strong>{{ $errors->first('preco') }}</strong>
+          </span>
+          @endif
+    
+          </div>
+        </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
           @csrf
       <div class="form-group">
+        <div class="form-group col-md-10">
         <label for="descricao">Descrição do Evento</label>
         <textarea name="descricao" placeholder="Digite a descrição do evento" id="descricao" cols="30" rows="10" class="form-control">{{ old('descricao') }}</textarea>
         @if ($errors->has('descricao'))
@@ -128,7 +156,6 @@
           </span>
         @endif
       </div>
-      <div>
       <div class="form-group">
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="gridCheck" require>
@@ -137,7 +164,7 @@
           </label>
         </div>
       </div>
-      <button type="submit" class="btn btn2">Divulgar</button>
+      <button type="submit" class="btn btn5">Divulgar</button>
     </form>
 	</div>
 </section>
