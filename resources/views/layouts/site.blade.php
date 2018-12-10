@@ -57,30 +57,19 @@
         <ul class="nav-menu">
           <li class="linkmenu"><a href="{{ route('inicial') }}">Inicio</a></li>
           <li><a href="{{ route('evento') }}">Eventos</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Categorias
-            </a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="#">Show</a>
-              <a class="dropdown-item" href="#">Palestras</a>
-              <a class="dropdown-item" href="#">Workshops</a>
-            </div>
-          </li>
           @if (Route::has('login'))
           @auth
-          <li><a class="linkmenu" href="{{ route('evento.index') }}">Painel</a></li>
+            <li><a href="{{ route('evento.create') }}" class="linkmenu">Criar Evento</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-o" aria-hidden="true" style="color: #f82249"></i> {{ $e->user['name'] }}
             </a>
             <div class="dropdown-menu">
+              <a href="{{ route('evento.index') }}" class="dropdown-item" >Meus Eventos</a>
               <a class="dropdown-item" href="" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Sair</a>
               
             </div>
           </li>
-          <li><a href="{{ route('evento.create') }}" class="about-btn scrollto">Divulgar Evento</a></li>
           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
             @csrf
           </form>
