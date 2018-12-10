@@ -81,13 +81,13 @@
   <button class="btn btn5" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
   	Vizitantes
   </button>
-  <button type="button" class="btn btn-secondary">Right</button>
-   <a href="{{ route('evento.edit', $e->id) }}" class="btn btn-lg btn5">Editar</a>
-              <form action="{{ route('evento.destroy', $e->id) }}" method="post" class="formbutton">
+  <form action="{{ route('evento.destroy', $e->id) }}" method="post" class="formbutton">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-lg btn5">Excluir</button>
-              </form>
+              </form>	
+   <a href="{{ route('evento.edit', $e->id) }}" class="btn btn-lg btn5">Editar</a>
+              
 </div>
 
 <div class="collapse" id="avaliacao">

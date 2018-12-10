@@ -70,6 +70,9 @@
                 <div class="details">
                   <center>
                     <h3><a class="nomeevento" href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}">{{ $e->nome_evento }}</a></h3>
+                    <div class="social-links">
+                      
+                    </div>
                     <div class="social">
                       <a  data-toggle="tooltip" data-placement="bottom" title="endereço"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
                       <a  data-toggle="tooltip" data-placement="bottom" title="data-inicio"><i class="fa fa-calendar" aria-hidden="true"></i>
