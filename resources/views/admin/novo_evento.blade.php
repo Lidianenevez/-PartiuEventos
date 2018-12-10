@@ -26,7 +26,7 @@
         <div class="form-group col-md-6">
 	        <label for="categoria">Categoria do Evento</label>
           <select class="form-control" id="categoria" name="categoria">
-            <option selected>escolher</option>
+            <option>escolher</option>
             @foreach ($categoria as $c)
               <option value="{{ $c->id }}">{{ $c->nome_categoria }}</option>
             @endforeach
@@ -143,7 +143,7 @@
     </div>
   </div>
   </div>
-  </div>
+</div>
 
           @csrf
       <div class="form-group">

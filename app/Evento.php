@@ -31,4 +31,12 @@ class Evento extends Model
 	{
 		return $this->belongsTo('App\Categoria', 'fk_categoria_id');
 	}
+
+	/**
+	 * Get the post that owns the comment.
+	 */
+	public function datetime()
+	{
+		return $this->belongsTo('App\DateTime', 'fk_datetime_id');
+	}
 }

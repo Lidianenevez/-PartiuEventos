@@ -36,7 +36,7 @@
         <div class="form-group col-md-5">
 	        <label for="categoria">Categoria do Evento</label>
           <select class="form-control" id="categoria" name="categoria">
-            <option selected>escolher</option>
+            <option value="">escolher</option>
             @foreach ($categoria as $c)
               <option value="{{ $c->id }}">{{ $c->nome_categoria }}</option>
             @endforeach
@@ -50,15 +50,6 @@
       </div>
       <div class="form-row">
         <div class="col-md-8">
-          <div class="form-group">
-            <label for="preco">Preço do Evento</label>
-            <input id="preco" type="number" step="0.01" value="{{ $e->preco }}" placeholder="Digite o nome do evento" class="form-control" name="preco" value="{{ old('preco') }}">
-            @if ($errors->has('preco'))
-              <span class="text-danger" role="alert">
-                <strong>{{ $errors->first('preco') }}</strong>
-              </span>
-            @endif
-          </div>
           <div class="form-row">
             <div class="form-group col-md-3">
               <label for="uf">Estado</label>
@@ -86,6 +77,79 @@
           @endif
         </div>
       </div>
+      <div class="form-row">
+          <div class="form-group col-md-3">
+            <label for="data">Data</label>
+            <input id="data" type="date" class="form-control" name="data" value="{{ old('data') }}">
+            @if ($errors->has('data'))
+            <span class="text-danger" role="alert">
+              <strong>{{ $errors->first('data') }}</strong>
+            </span>
+            @endif
+          </div>
+          <div class="form-group col-md-3">
+            <label for="data_final">Data de término(opcional)</label>
+            <input id="data_final" type="date" class="form-control" name="data_final" value="{{ old('data_final') }}">
+            @if ($errors->has('data_final'))
+            <span class="text-danger" role="alert">
+              <strong>{{ $errors->first('data_final') }}</strong>
+            </span>
+            @endif
+          </div>
+          <div class="form-group col-md-3">
+            <label for="hora">Hora</label>
+            <input id="hora" type="time" class="form-control" name="hora" value="{{ old('hora') }}">
+            @if ($errors->has('hora'))
+            <span class="text-danger" role="alert">
+              <strong>{{ $errors->first('hora') }}</strong>
+            </span>
+            @endif
+          </div>
+          <div class="form-group col-md-3">
+            <label for="hora_final">Hora de término(opcional)</label>
+            <input id="hora_final" type="time" class="form-control" name="hora_final" value="{{ old('hora_final') }}">
+            @if ($errors->has('hora_final'))
+            <span class="text-danger" role="alert">
+              <strong>{{ $errors->first('hora_final') }}</strong>
+            </span>
+            @endif
+          </div>
+  
+  
+          <div class="form-row">
+          <div class="form-group col-md-6">
+            &nbsp;
+          </div>
+          
+          <div class="form-group col-md-6">
+            Tipo de evento: 
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              <label class="form-check-label" for="exampleRadios1">
+               Gratuito
+             </label>
+            </div>
+  
+          <div class="form-check"> 
+            <label class="form-check-label" for="exampleRadios2" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">Pago</label>
+            
+            <div class="collapse" id="collapseExample">
+             <div class="card card-body">
+     
+            <label for="preco">Preço do Evento</label>
+             <input id="preco" type="number" step="0.01" placeholder="Valor" class="form-control" name="preco" value="{{ old('preco') }}">
+            @if ($errors->has('preco'))
+            <span class="text-danger" role="alert">
+              <strong>{{ $errors->first('preco') }}</strong>
+            </span>
+            @endif
+      
+            </div>
+          </div>
+      </div>
+    </div>
+    </div>
+  </div>
       <div class="form-group">
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="gridCheck" require>

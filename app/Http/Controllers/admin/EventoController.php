@@ -78,15 +78,15 @@ class EventoController extends Controller
 								->back()
 									->with('msg_danger','Falha ao fazer o upload da imagem!');
 		}
-		$e->save();
 		$dt = new DateTime;
-		$dt->fk_evento_id = $e->id;
 		$dt->data_inicio = $request->data;
 		$dt->data_final = $request->data_final;
 		$dt->hora_inicio = $request->hora;
 		$dt->hora_final = $request->hora_final;
 		$dt->carga_horaria = $request->carga_horaria;
 		$dt->save();
+		$e->fk_datetime_id = $dt->id;
+		$e->save();
 		return redirect()
 					->route('evento.index')
 						->with('msg_success','Você criou um evento com sucesso!');
@@ -129,8 +129,9 @@ class EventoController extends Controller
 			'descricao' => 'required',
 			'nome_evento' => 'required|max:191',
 			'categoria' => 'required',
-			'preco' => 'required|numeric',
 			'cidade' => 'required',
+			'data' => 'required',
+			'hora' => 'required',
 		]);
 		$e = Evento::find($id);
 		$e->nome_evento = $request->nome_evento;
@@ -146,6 +147,13 @@ class EventoController extends Controller
 		$e->preco = $request->preco;
 		$e->fk_categoria_id = $request->categoria;
 		if($e->fk_user_id == Auth::id()){
+			$dt = DateTime::find($e->fk_datetime_id);
+			$dt->data_inicio = $request->data;
+			$dt->data_final = $request->data_final;
+			$dt->hora_inicio = $request->hora;
+			$dt->hora_final = $request->hora_final;
+			$dt->carga_horaria = $request->carga_horaria;
+			$dt->save();
 			$e->save();
 			return redirect()->route('evento.index')
 							->with('msg_success','Você atualizou o seu evento!');	

@@ -26,8 +26,8 @@
 				<div class="card-header">Meus eventos</div>
 				<div class="card-body">
 					@foreach($eventos as $e)
-						<h3>{{ $e->nome_evento }}</h3>
-						<p>{{ $e->descricao }}</p>
+						<h3>{{ $e->nome_evento }} - {{ date('d/m/Y', strtotime($e->datetime['data_inicio'])) }}</h3>
+						<p>{!! $e->descricao !!}</p>
 						<div class="row justify-content-center">
 							<div class="col-md-3">{{ $e->category['nome_categoria'] }}</div>
 							<div class="col-md-3">R$ {{ $e->preco }}</div>
