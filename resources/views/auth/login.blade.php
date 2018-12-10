@@ -54,6 +54,7 @@
 										</label>
 									</div>
 									<div class="text-center">
+										{!! NoCaptcha::display() !!}
 										<button type="submit" class="btn btn2 my-4">{{ __('Login') }}</button>
 										@if (Route::has('password.request'))
 											<a class="btn btn-link" href="{{ route('password.request') }}">
