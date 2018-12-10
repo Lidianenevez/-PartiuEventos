@@ -820,7 +820,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   border: 1px solid #f82249;
   border-radius: 5px;
   margin-top: 10px;
-  padding: 20px
+  padding: 20px;
 }
 #speakers .speaker .social {
   height: 30px;
@@ -828,7 +828,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #speakers .speaker  a i {
   color: #f82249;
-  margin-left: 10px;
   font-size: 25px;
 }
 
