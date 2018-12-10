@@ -429,6 +429,10 @@ form{
   border-color: #000;
   border-radius: 20% #f82249;
 }
+
+.formbutton{
+  border:none;
+}
 .cardmodal{
   background-color: #000c;
 }
