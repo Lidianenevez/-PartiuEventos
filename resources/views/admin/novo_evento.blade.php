@@ -1,7 +1,8 @@
 @extends('layouts.site')
 
 @section('content')
-<section id="speakers-details" style="margin-top:100px" class="wow fadeInUp" >
+<main id="main" class="main-page">
+<section id="speakers-details"  class="wow fadeInUp" >
 	<div class="row justify-content-center">
 		<div class="section-header col-md-12">
 			<h2>Insira as informações</h2>
@@ -11,7 +12,8 @@
 				{{ session('msg_danger') }}
 		  </div>
 		@endif
-    <form method="POST" class="col-md-10" action="{{ route('evento.store') }}" enctype="multipart/form-data">
+
+    <form method="POST" class="col-md-10" action="{{ route('evento.store') }}" enctype="multipart/form-data" style="padding: 20px">
 		
       <div class="form-row">
 	      <div class="form-group col-md-6">
@@ -40,7 +42,7 @@
       </div>
       
         <div class="form-row">
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-5">
           <label for="carga_horaria">Carga horaria</label>
           <input id="carga_horaria" type="number" class="form-control" name="carga_horaria" value="{{ old('carga_horaria') }}">
           @if ($errors->has('carga_horaria'))
@@ -49,7 +51,7 @@
           </span>
           @endif
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-2">
           <label for="uf">Estado</label>
           <select class="form-control" default="AP" id="uf"></select>
         </div>
@@ -102,7 +104,7 @@
           </span>
           @endif
         </div>
-
+      </div>
 
         <div class="form-row">
         <div class="form-group col-md-6">
@@ -124,9 +126,10 @@
            </label>
           </div>
 
+
         <div class="form-check"> 
           <label class="form-check-label" for="exampleRadios2" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">Pago</label>
-          
+          </div>
           <div class="collapse" id="collapseExample">
            <div class="card card-body">
    
@@ -142,30 +145,36 @@
         </div>
     </div>
   </div>
-  </div>
-</div>
-
-          @csrf
-      <div class="form-group">
+    <div class="form-row justify-content-center">
         <div class="form-group col-md-10">
         <label for="descricao">Descrição do Evento</label>
-        <textarea name="descricao" placeholder="Digite a descrição do evento" id="descricao" cols="30" rows="10" class="form-control">{{ old('descricao') }}</textarea>
+        <textarea name="descricao" placeholder="Digite a descrição do evento" id="descricao"  class="form-control" cols="30" rows="10"  >{{ old('descricao') }}</textarea>
         @if ($errors->has('descricao'))
           <span class="text-danger" role="alert">
             <strong>{{ $errors->first('descricao') }}</strong>
           </span>
         @endif
       </div>
-      <div class="form-group">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="gridCheck" require>
-          <label class="form-check-label" for="gridCheck">
-            Concordo com os termos...
-          </label>
-        </div>
-      </div>
+    </div>
+
+
+
+
+      <div class="form-row">
+        <div class="form-group col-md-10">
+        
       <button type="submit" class="btn btn5">Divulgar</button>
-    </form>
-	</div>
+    
+  </div>
+</div>
+
+        
+
+         
+
+</form>
+ @csrf
+</div>
 </section>
+</main>
 @endsection
