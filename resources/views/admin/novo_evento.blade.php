@@ -14,7 +14,7 @@
 		@endif
 
     <form method="POST" class="col-md-10" action="{{ route('evento.store') }}" enctype="multipart/form-data" style="padding: 20px">
-		
+      @csrf
       <div class="form-row">
 	      <div class="form-group col-md-6">
 	        <label for="nome_evento">Nome do Evento</label>

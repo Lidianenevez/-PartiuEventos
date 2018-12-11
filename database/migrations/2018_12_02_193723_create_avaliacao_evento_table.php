@@ -18,7 +18,7 @@ class CreateAvaliacaoEventoTable extends Migration
             $table->unsignedInteger('fk_user_id');
             $table->unsignedInteger('fk_evento_id');
             $table->string('feedback')->nullable();
-            $table->float('nota', 4, 2);
+            $table->integer('estrela');
             $table->timestamps();
             $table->foreign('fk_user_id')->references('id')->on('users');
             $table->foreign('fk_evento_id')->references('id')->on('evento');
