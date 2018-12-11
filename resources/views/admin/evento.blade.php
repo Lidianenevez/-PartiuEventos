@@ -34,11 +34,32 @@
       Detalhes do evento
     ============================-->
     <section id="speakers-details" class="wow fadeIn">
-      <div class="container">
+      <div class="container" style="border:1px solid #bfbdbd">
         <div class="section-header">
           <h2>{{ $e->nome_evento }}</h2>
         </div>
-        
+
+        <nav class="nav flex-column">
+   <a class="btn btn5 nav-link active" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              Avaliação do Evento
+             </a>
+             <div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Dados da Avaliação
+  </div>
+</div>
+             <br>
+  <a href="{{ route('evento.edit', $e->id) }}" class="btn btn5 nav-link active">Editar</a><br>
+  <form action="{{ route('evento.destroy', $e->id) }}" method="post" class="formbutton">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn5 nav-link btn-lg btn-block" style="color: red">Excluir</button>
+              </form>
+
+   
+</nav>
+
+
         <div class="row">
           <div class="col-md-6">
              <img src="{{ asset('storage/posts/'.$e->fk_user_id.'/'.$e->imagem) }}" alt="banner evento" class="img-fluid">
