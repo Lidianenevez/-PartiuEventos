@@ -5,7 +5,7 @@
 <section id="speakers-details" class="wow fadeInUp" >
   <div class="row justify-content-center">
     <div class="section-header col-md-12">
-      <h2>Insira as informações</h2>
+      <h2>Editar as Informações</h2>
     </div>
     @if (session('msg_danger'))
       <div class="alert alert-danger col-md-8">
@@ -103,7 +103,7 @@
           </span>
           @endif
         </div>
-
+      </div>
 
         <div class="form-row">
         <div class="form-group col-md-6">
@@ -128,7 +128,7 @@
 
         <div class="form-check"> 
           <label class="form-check-label" for="exampleRadios2" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">Pago</label>
-          
+          </div>
           <div class="collapse" id="collapseExample">
            <div class="card card-body">
    
@@ -139,14 +139,11 @@
             <strong>{{ $errors->first('preco') }}</strong>
           </span>
           @endif
-    </div>
+          </div>
         </div>
-    </div>
-  </div>
-
-
-
-          @csrf
+      </div>
+     </div>
+         
         <div class="form-row justify-content-center">
         <div class="form-group col-md-10">
         <label for="descricao">Descrição do Evento</label>
@@ -161,12 +158,12 @@
       <div class="form-row">
         <div class="form-group col-md-10">
         
-      <button type="submit" class="btn btn5">Divulgar</button>
+      <button type="submit" class="btn btn5">Editar</button>
     
   </div>
 </div>
-</form>
  @csrf
+</form>
 </div>
 </section>
 </main>

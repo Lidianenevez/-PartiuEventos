@@ -856,6 +856,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #speakers-details {
   padding: 60px 0;
+  overflow-x: hidden;
 }
 
 .nomeevento {

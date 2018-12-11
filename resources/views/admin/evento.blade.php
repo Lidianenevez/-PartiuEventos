@@ -72,41 +72,8 @@
 
     </section>
 
-            <div class="row justify-content-center" >
-            	<div class="col-md-10">
-
-            		<div class="btn-group" role="group" aria-label="Basic example">
-  <button class="btn btn5" type="button" data-toggle="collapse" data-target="#avaliacao" aria-expanded="false" aria-controls="collapseExample">
-  	Avaliação do Evento
-  </button>
-  <button class="btn btn5" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-  	Vizitantes
-  </button>
-  <form action="{{ route('evento.destroy', $e->id) }}" method="post" class="formbutton">
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="btn btn-lg btn5">Excluir</button>
-              </form>	
-   <a href="{{ route('evento.edit', $e->id) }}" class="btn btn-lg btn5">Editar</a>
-              
-</div>
-
-<div class="collapse" id="avaliacao">
-  <div class="card card-body">
-    Dados da Avaliação
-  </div>
-</div>
-  
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-    Dados de Vizitantes
-  </div>
-</div>
          
-            </div>
-          @endforeach
-        </div>
-      </div>
+       @endforeach
     </div>
   </div>
 

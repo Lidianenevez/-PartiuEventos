@@ -2,7 +2,7 @@
 
 @section('content')
 <main id="main" class="main-page">
-<section id="speakers-details"  class="wow fadeInUp" >
+<section id="speakers-details" class="wow fadeInUp" >
 	<div class="row justify-content-center">
 		<div class="section-header col-md-12">
 			<h2>Insira as informações</h2>
@@ -126,7 +126,6 @@
            </label>
           </div>
 
-
         <div class="form-check"> 
           <label class="form-check-label" for="exampleRadios2" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">Pago</label>
           </div>
@@ -145,6 +144,7 @@
         </div>
     </div>
   </div>
+
     <div class="form-row justify-content-center">
         <div class="form-group col-md-10">
         <label for="descricao">Descrição do Evento</label>
@@ -158,8 +158,6 @@
     </div>
 
 
-
-
       <div class="form-row">
         <div class="form-group col-md-10">
         
@@ -167,13 +165,9 @@
     
   </div>
 </div>
-
-        
-
-         
-
-</form>
  @csrf
+</form>
+
 </div>
 </section>
 </main>
