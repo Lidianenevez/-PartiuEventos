@@ -48,12 +48,12 @@
             <div class="details">
               <h3>Descrição</h3>
              
-              <p>{{ $e->descricao }}</p>
+              <p>{!! $e->descricao !!}</p>
  
               <div class="social">
-                      <i class="fa fa-map-marker" aria-hidden="true"></i> <span>local:</span><br>
-                      <i class="fa fa-calendar" aria-hidden="true"></i> <span>Data:</span><br>
-                      <i class="fa fa-clock-o" aria-hidden="true"></i> <span>horario:</span><br>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i> <span>local: {{ $e->city['nome'] }}-{{ $e->city['uf'] }}</span><br>
+                      <i class="fa fa-calendar" aria-hidden="true"></i> <span>Data: {{ date('d/m/Y', strtotime($e->datetime['data_inicio'])) }}</span><br>
+                      <i class="fa fa-clock-o" aria-hidden="true"></i> <span>horario: {{ date('H:i:s', strtotime($e->datetime['hora_inicio'])) }}</span><br>
                       <i class="fa fa-money" aria-hidden="true"></i> <span>R$ {{ $e->preco }}</span>
                     </div>
               <center>
@@ -71,6 +71,7 @@
       </div>
 
     </section>
+
             <div class="row justify-content-center" >
             	<div class="col-md-10">
 
