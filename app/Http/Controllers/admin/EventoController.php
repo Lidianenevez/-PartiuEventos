@@ -125,7 +125,6 @@ class EventoController extends Controller
 	 */
 	public function update(Request $request, $id)
 	{
-		dd($request->imagem);
 		$validatedData = $request->validate([
 			'descricao' => 'required',
 			'nome_evento' => 'required|max:191',

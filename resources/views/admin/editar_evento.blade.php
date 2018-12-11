@@ -11,8 +11,8 @@
         {{ session('msg_danger') }}
       </div>
     @endif
-    <form method="POST" class="col-md-10" action="{{ route('evento.store') }}" enctype="multipart/form-data">
-    
+    <form method="POST" class="col-md-10" action="{{ route('evento.update', $e->id) }}" enctype="multipart/form-data">
+      @method('put')
       <div class="form-row">
         <div class="form-group col-md-6 ">
           <label for="nome_evento">Nome do Evento</label>
@@ -68,7 +68,7 @@
       <div class="form-row">
         <div class="form-group col-md-3">
           <label for="data">Data</label>
-          <input id="data" type="date" class="form-control" name="data" value="{{ $e->data }}">
+          <input id="data" type="date" class="form-control" name="data" value="{{ $e->datetime['data'] }}">
           @if ($errors->has('data'))
           <span class="text-danger" role="alert">
             <strong>{{ $errors->first('data') }}</strong>
@@ -77,7 +77,7 @@
         </div>
         <div class="form-group col-md-3">
           <label for="data_final">Data de término(opcional)</label>
-          <input id="data_final" type="date" class="form-control" name="data_final" value="{{ $e->data_final }}">
+          <input id="data_final" type="date" class="form-control" name="data_final" value="{{ $e->datetime['data_final'] }}">
           @if ($errors->has('data_final'))
           <span class="text-danger" role="alert">
             <strong>{{ $errors->first('data_final') }}</strong>
@@ -86,7 +86,7 @@
         </div>
         <div class="form-group col-md-3">
           <label for="hora">Hora</label>
-          <input id="hora" type="time" class="form-control" name="hora" value="{{ $e->hora }}">
+          <input id="hora" type="time" class="form-control" name="hora" value="{{ $e->datetime['hora'] }}">
           @if ($errors->has('hora'))
           <span class="text-danger" role="alert">
             <strong>{{ $errors->first('hora') }}</strong>
@@ -95,7 +95,7 @@
         </div>
         <div class="form-group col-md-3">
           <label for="hora_final">Hora de término(opcional)</label>
-          <input id="hora_final" type="time" class="form-control" name="hora_final" value="{{ $e->hora_final }}">
+          <input id="hora_final" type="time" class="form-control" name="hora_final" value="{{ $e->datetime['hora_final'] }}">
           @if ($errors->has('hora_final'))
           <span class="text-danger" role="alert">
             <strong>{{ $errors->first('hora_final') }}</strong>
