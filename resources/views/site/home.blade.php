@@ -95,9 +95,9 @@
                       </form>
                     </div>
                     <div class="social">
-                      <a  data-toggle="tooltip" data-placement="bottom" title="endereço"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
-                      <a  data-toggle="tooltip" data-placement="bottom" title="data-inicio"><i class="fa fa-calendar" aria-hidden="true"></i>
-                       <a  data-toggle="tooltip" data-placement="bottom" title="data-fim"><i class="fa fa-clock-o" aria-hidden="true"></i></a>
+                      <a  data-toggle="tooltip" data-placement="bottom" title="{{ $e->city['nome'] }}-{{ $e->city['uf'] }}"><i class="fa fa-map-marker" aria-hidden="true"></i></a>
+                      <a  data-toggle="tooltip" data-placement="bottom" title="{{ date('d/m/Y', strtotime($e->datetime['data_inicio'])) }}"><i class="fa fa-calendar" aria-hidden="true"></i>
+                       <a  data-toggle="tooltip" data-placement="bottom" title="{{ date('H:i:s', strtotime($e->datetime['hora_inicio'])) }}"><i class="fa fa-clock-o" aria-hidden="true"></i></a>
                       <a href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}" class="btn4">Saiba mais</a>
                     </div>
                   </center>
@@ -143,9 +143,9 @@
               <div class="row schedule-item">
                 <div class="col-md-4">
                   <div class="social">
-                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-map-marker"  style="color: #f82249" aria-hidden="true"></i></a>
-                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-calendar"  style="color: #f82249" aria-hidden="true"></i>
-                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-clock-o"  style="color: #f82249"aria-hidden="true"></i></a>
+                    <a  data-toggle="tooltip" data-placement="bottom" title="{{ $e->city['nome'] }}-{{ $e->city['uf'] }}"><i class="fa fa-map-marker"  style="color: #f82249" aria-hidden="true"></i></a>
+                    <a  data-toggle="tooltip" data-placement="bottom" title="{{ date('d/m/Y', strtotime($e->datetime['data_inicio'])) }}"><i class="fa fa-calendar"  style="color: #f82249" aria-hidden="true"></i>
+                    <a  data-toggle="tooltip" data-placement="bottom" title="{{ date('H:i:s', strtotime($e->datetime['hora_inicio'])) }}"><i class="fa fa-clock-o"  style="color: #f82249"aria-hidden="true"></i></a>
                 </div>
               </div>
                 <div class="col-md-8">
@@ -169,9 +169,9 @@
               <div class="row schedule-item">
                 <div class="col-md-4">
                   <div class="social">
-                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-map-marker"  style="color: #f82249" aria-hidden="true"></i></a>
-                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-calendar"  style="color: #f82249" aria-hidden="true"></i>
-                    <a  data-toggle="tooltip" data-placement="bottom" title="Av Prof"><i class="fa fa-clock-o"  style="color: #f82249"aria-hidden="true"></i></a>
+                     <a  data-toggle="tooltip" data-placement="bottom" title="{{ $e->city['nome'] }}-{{ $e->city['uf'] }}"><i class="fa fa-map-marker"  style="color: #f82249" aria-hidden="true"></i></a>
+                    <a  data-toggle="tooltip" data-placement="bottom" title="{{ date('d/m/Y', strtotime($e->datetime['data_inicio'])) }}"><i class="fa fa-calendar"  style="color: #f82249" aria-hidden="true"></i>
+                    <a  data-toggle="tooltip" data-placement="bottom" title="{{ date('H:i:s', strtotime($e->datetime['hora_inicio'])) }}"><i class="fa fa-clock-o"  style="color: #f82249"aria-hidden="true"></i></a>
                 </div>
               </div>
                 <div class="col-md-8">
