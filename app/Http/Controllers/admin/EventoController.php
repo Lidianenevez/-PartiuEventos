@@ -125,6 +125,7 @@ class EventoController extends Controller
 	 */
 	public function update(Request $request, $id)
 	{
+		dd($request->imagem);
 		$validatedData = $request->validate([
 			'descricao' => 'required',
 			'nome_evento' => 'required|max:191',
@@ -154,6 +155,7 @@ class EventoController extends Controller
 			$dt->hora_final = $request->hora_final;
 			$dt->carga_horaria = $request->carga_horaria;
 			$dt->save();
+			$e->fk_datetime_id = $dt->id;
 			$e->save();
 			return redirect()->route('evento.index')
 							->with('msg_success','Você atualizou o seu evento!');	
