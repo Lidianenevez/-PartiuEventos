@@ -20,6 +20,11 @@
         {{ session('msg_danger') }}
       </div>
       @endif
+      @if (session('msg_success'))
+      <div class="alert alert-success">
+        {{ session('msg_success') }}
+      </div>
+      @endif
       <form method='post' action="{{ route('evento.busca') }}">
         @csrf
         <div class="form-row">
@@ -71,7 +76,8 @@
                   <center>
                     <h3><a class="nomeevento" href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}">{{ $e->nome_evento }}</a></h3>
                     <div class="social-links">
-                    <form method="POST" action='{{ route('avalie', $e->id) }}'>
+                      <form method="POST" action='{{ route('avalie', $e->id) }}'>
+                        @csrf
                         <div class="estrelas">
                           <input type="radio" id="vazio" name="estrela" value="" checked>
                           <label for="estrela_um"><i class="fa"></i></label>

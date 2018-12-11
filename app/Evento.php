@@ -39,4 +39,11 @@ class Evento extends Model
 	{
 		return $this->belongsTo('App\DateTime', 'fk_datetime_id');
 	}
+	/**
+	 * Get the post that owns the comment.
+	 */
+	public function avaliar()
+	{
+		return $this->hasMany('App\Avaliacao', 'fk_evento_id');
+	}
 }

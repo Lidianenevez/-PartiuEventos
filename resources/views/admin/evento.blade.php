@@ -94,6 +94,9 @@
 <div class="collapse" id="avaliacao">
   <div class="card card-body">
     Dados da Avaliação
+    @foreach ($av as $a)
+      {{ $a->estrela }}
+    @endforeach
   </div>
 </div>
   

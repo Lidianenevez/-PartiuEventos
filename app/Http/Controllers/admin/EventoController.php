@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\Controller;
+use App\Avaliacao;
 use App\Evento;
 use App\DateTime;
 use App\Categoria;
@@ -30,7 +31,8 @@ class EventoController extends Controller
 	public function index()
 	{
 		$eventos = Evento::where('fk_user_id',Auth::id())->get();
-		return view('admin.evento',compact('eventos'));
+		$av = Avaliacao::all();
+		return view('admin.evento',compact('eventos','av'));
 	}
 
 	/**

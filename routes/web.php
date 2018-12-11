@@ -13,12 +13,12 @@
 
 Route::get('/', 'Site\InicialController@index')->name('inicial');
 Route::get('/evento', 'Site\EventoController@index')->name('evento');
-Route::post('/avalie/{id}', 'Site\AvaliacaoController@avaliar')->name('avalie');
 Route::post('/evento', 'Site\EventoController@busca')->name('evento.busca');
 Route::get('/evento/{id}/{nome}', 'Site\EventoController@show')->name('evento.mostrar');
 
 Auth::routes();
 
+Route::post('/avalie/{id}', 'Admin\AvaliacaoController@avaliar')->name('avalie');
 Route::resource('admin/evento', 'Admin\EventoController');
 
 
