@@ -32,7 +32,9 @@ class EventoController extends Controller
 	{
 		$eventos = Evento::where('fk_user_id',Auth::id())->get();
 		$av = Avaliacao::all();
-		return view('admin.evento',compact('eventos','av'));
+		$soma = null;
+		$contador = null;
+		return view('admin.evento',compact('eventos','av','soma','contador'));
 	}
 
 	/**
