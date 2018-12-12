@@ -105,9 +105,9 @@
               </div>
             </div>
           @endforeach
-        
 
-      
+
+
       </div>
     </section>
 
@@ -135,7 +135,7 @@
         <div class="tab-content row justify-content-center">
 
           <!-- Schdule Day 1 -->
-           
+
           <div role="tabpanel" class="col-lg-6 tab-pane fade show active" id="day-1">
 
             @foreach ($evento as $e)
@@ -150,12 +150,12 @@
               </div>
                 <div class="col-md-8">
                   <h4> Evento: {{ $e->nome_evento }} </h4>
-                   <a href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}" class="btn5">Saiba mais</a>
+                   <a href="{{ route('evento.mostrar', [$e->id,kebab_case($e->nome_evento)]) }}" class="btn5 link-black-hover-bottom">Saiba mais</a>
                 </div>
               </div>
                  </center>
             @endforeach
-         
+
 
           </div>
 
@@ -181,7 +181,7 @@
               </div>
                  </center>
             @endforeach
-                
+
 
           </div>
           <!-- End Schdule Day 2 -->
@@ -305,7 +305,7 @@
                   <p>
                     Aqui no #PartiuEventos é muito fácil as pessoas encontrarem  um evento de sua preferencia!
                     É cômodo e bem intuitivo. Contamos com as maiores tecnologias de marketing digital para
-                    proporcionar a nossos clientes uma maior interação entre um produtor de eventos e seus 
+                    proporcionar a nossos clientes uma maior interação entre um produtor de eventos e seus
                     participantes.
                   </p>
                 </div>

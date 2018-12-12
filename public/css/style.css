@@ -54,6 +54,41 @@ h6 {
   visibility: hidden;
 }
 
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: black;
+}
+
+input[type=number] {
+   -moz-appearance: textfield;
+   appearance: textfield;
+   margin: 0;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #f82249;
+}
+
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+.link-black-hover {
+    margin-bottom: 10px;
+}
+
+.link-black-hover:hover, .link-black-hover-bottom:hover {
+    color: #f82249;
+
+}
+
+.button-style {
+    margin-right: 10px;
+    border-top-left-radius: 5;
+    border-bottom-left-radius: 5;
+}
 /* Prelaoder */
 
 #preloader {
@@ -833,6 +868,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-radius: 5px;
   margin-top: 10px;
   padding: 20px;
+  margin-bottom: 10px;
 }
 #speakers .speaker .social {
   height: 30px;

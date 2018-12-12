@@ -74,7 +74,7 @@
                           <div class="custom-control custom-control-alternative custom-checkbox">
                             <input class="custom-control-input" id="customCheckRegister" type="checkbox" required>
                             <label class="custom-control-label" for="customCheckRegister">
-                              <span> <a href="#" style="color: blue">Não sou robô</a> </span>
+                              <span> <a href="#">Não sou robô</a> </span>
                             </label>
                           </div>
                           <div class="text-center">

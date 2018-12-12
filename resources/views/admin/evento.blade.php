@@ -40,7 +40,7 @@
         </div>
 
         <nav class="nav flex-column">
-   <a class="btn btn5 nav-link active" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+   <a class="btn btn5 nav-link active link-black-hover" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
               Avaliação do Evento
              </a>
              <div class="collapse" id="collapseExample">
@@ -49,14 +49,14 @@
   </div>
 </div>
              <br>
-  <a href="{{ route('evento.edit', $e->id) }}" class="btn btn5 nav-link active">Editar</a><br>
+  <a href="{{ route('evento.edit', $e->id) }}" class="btn btn5 nav-link active link-black-hover">Editar</a><br>
   <form action="{{ route('evento.destroy', $e->id) }}" method="post" class="formbutton">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn5 nav-link btn-lg btn-block" style="color: red">Excluir</button>
               </form>
 
-   
+
 </nav>
 
 
@@ -68,14 +68,14 @@
           <div class="col-md-6">
             <div class="details">
               <h3>Descrição</h3>
-             
+
               <p>{!! $e->descricao !!}</p>
- 
+
               <div class="social">
-                      <i class="fa fa-map-marker" aria-hidden="true"></i> <span>local: {{ $e->city['nome'] }}-{{ $e->city['uf'] }}</span><br>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i> <span>Local: {{ $e->city['nome'] }}-{{ $e->city['uf'] }}</span><br>
                       <i class="fa fa-calendar" aria-hidden="true"></i> <span>Data: {{ date('d/m/Y', strtotime($e->datetime['data_inicio'])) }}</span><br>
-                      <i class="fa fa-clock-o" aria-hidden="true"></i> <span>horario: {{ date('H:i:s', strtotime($e->datetime['hora_inicio'])) }}</span><br>
-                      <i class="fa fa-money" aria-hidden="true"></i> <span>R$ {{ $e->preco }}</span>
+                      <i class="fa fa-clock-o" aria-hidden="true"></i> <span>Horário: {{ date('H:i:s', strtotime($e->datetime['hora_inicio'])) }}</span><br>
+                      <i class="fa fa-money" aria-hidden="true"></i> <span>R${{ $e->preco }}</span>
                     </div>
               <center>
                <div class="social-links">
@@ -87,7 +87,7 @@
               </center>
             </div>
           </div>
-          
+
         </div>
       </div>
 
@@ -97,19 +97,19 @@
             	<div class="col-md-10">
 
             		<div class="btn-group" role="group" aria-label="Basic example">
-  <button class="btn btn5" type="button" data-toggle="collapse" data-target="#avaliacao" aria-expanded="false" aria-controls="collapseExample">
+  <button class="btn btn5 button-style" type="button" data-toggle="collapse" data-target="#avaliacao" aria-expanded="false" aria-controls="collapseExample" style="border-top-left-radius: 5; border-bottom-left-radius: 5; border-radius: 5px;">
   	Avaliação do Evento
   </button>
-  <button class="btn btn5" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  <button class="btn btn5 button-style" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="border-top-left-radius: 5; border-bottom-left-radius: 5; border-radius: 5px;">
   	Vizitantes
   </button>
   <form action="{{ route('evento.destroy', $e->id) }}" method="post" class="formbutton">
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="btn btn-lg btn5">Excluir</button>
-              </form>	
-   <a href="{{ route('evento.edit', $e->id) }}" class="btn btn-lg btn5">Editar</a>
-              
+                <button type="submit" class="btn btn-lg btn5 button-style link-black-hover-bottom" style="border-top-left-radius: 5; border-bottom-left-radius: 5; border-radius: 5px;">Excluir</button>
+              </form>
+   <a href="{{ route('evento.edit', $e->id) }}" class="btn btn-lg btn5 button-style link-black-hover-bottom" style="border-top-left-radius: 5; border-bottom-left-radius: 5; border-radius: 5px;">Editar</a>
+
 </div>
 
 <div class="collapse" id="avaliacao">
@@ -120,13 +120,13 @@
     @endforeach
   </div>
 </div>
-  
+
 <div class="collapse" id="collapseExample">
   <div class="card card-body">
     Dados de Vizitantes
   </div>
 </div>
-         
+
        @endforeach
     </div>
   </div>

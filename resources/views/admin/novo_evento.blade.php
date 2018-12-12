@@ -28,7 +28,7 @@
         <div class="form-group col-md-6">
 	        <label for="categoria">Categoria do Evento</label>
           <select class="form-control" id="categoria" name="categoria">
-            <option>escolher</option>
+            <option>Escolher Categoria</option>
             @foreach ($categoria as $c)
               <option value="{{ $c->id }}">{{ $c->nome_categoria }}</option>
             @endforeach
@@ -40,11 +40,11 @@
           @endif
 	      </div>
       </div>
-      
+
         <div class="form-row">
         <div class="form-group col-md-5">
-          <label for="carga_horaria">Carga horaria</label>
-          <input id="carga_horaria" type="number" class="form-control" name="carga_horaria" value="{{ old('carga_horaria') }}">
+          <label for="carga_horaria">Carga Horária</label>
+          <input id="carga_horaria" type="number" class="form-control" name="carga_horaria" value="{{ old('carga_horaria') }}" placeholder="-- : --">
           @if ($errors->has('carga_horaria'))
           <span class="text-danger" role="alert">
             <strong>{{ $errors->first('carga_horaria') }}</strong>
@@ -116,9 +116,9 @@
             </span>
           @endif
         </div>
-        
+
         <div class="form-group col-md-6">
-          Tipo de evento: 
+          Tipo de evento:
           <div class="form-check">
             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
             <label class="form-check-label" for="exampleRadios1">
@@ -126,12 +126,12 @@
            </label>
           </div>
 
-        <div class="form-check"> 
+        <div class="form-check">
           <label class="form-check-label" for="exampleRadios2" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample"><input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">Pago</label>
           </div>
           <div class="collapse" id="collapseExample">
            <div class="card card-body">
-   
+
           <label for="preco">Preço do Evento</label>
            <input id="preco" type="number" step="0.01" placeholder="Valor" class="form-control" name="preco" value="{{ old('preco') }}">
           @if ($errors->has('preco'))
@@ -139,7 +139,7 @@
             <strong>{{ $errors->first('preco') }}</strong>
           </span>
           @endif
-    
+
           </div>
         </div>
     </div>
@@ -160,9 +160,9 @@
 
       <div class="form-row">
         <div class="form-group col-md-10">
-        
+
       <button type="submit" class="btn btn5">Divulgar</button>
-    
+
   </div>
 </div>
  @csrf

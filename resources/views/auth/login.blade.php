@@ -49,7 +49,7 @@
 									</div>
 									{!! NoCaptcha::display() !!}
 									<div class="custom-control custom-control-alternative custom-checkbox">
-										<input class="custom-control-input" name="remember" id="customCheckLogin" type="checkbox" {{ old('remember') ? 'checked' : '' }}> 
+										<input class="custom-control-input" name="remember" id="customCheckLogin" type="checkbox" {{ old('remember') ? 'checked' : '' }}>
 										<label class="custom-control-label" for="customCheckLogin">
 											<span style="color: white">{{ __('Lembrar senha') }}</span>
 										</label>
@@ -57,12 +57,12 @@
 									<div class="text-center">
 										<button type="submit" class="btn btn2 my-4">{{ __('Login') }}</button>
 										@if (Route::has('password.request'))
-											<a class="btn btn-link" href="{{ route('password.request') }}">
+											<a class="btn" href="{{ route('password.request') }}">
 											{{ __('Esqueci minha senha?') }}
 											</a>
 										@endif
 
-										<span style="font-size: 15px; color:#fff">{{ __('Não possui uma conta?') }}<a href="{{ route('register') }}" style="style="font-size: 15px;">{{ __('Cadastre-se') }}</a></span>
+										<span style="font-size: 15px; color:#fff">{{ __('Não tem conta?') }}<a href="{{ route('register') }}" style="style="font-size: 15px;">{{ __(' Cadastre-se') }}</a></span>
 									</div>
 
 								</form>

@@ -36,7 +36,7 @@
 
   <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
   <script>tinymce.init({ selector:'textarea' });</script>
-  
+
   {!! NoCaptcha::renderJs() !!}
 
 </head>
@@ -68,7 +68,7 @@
             <div class="dropdown-menu">
               <a href="{{ route('evento.index') }}" class="dropdown-item" >Meus Eventos</a>
               <a class="dropdown-item" href="" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Sair</a>
-              
+
             </div>
           </li>
           <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -104,7 +104,7 @@
 
       <div class="col-lg-4 col-md-6 footer-info">
         <center><img src="{{ url('img/logo.jpg') }}" alt="logo" class="rounded-circle img-center img-fluid shadow shadow-lg--hover"></center>
-        <p>O <b>#PartiuEventos</b> é uma empresa que busca informar sobre os eventos que estão ocorrendo ou que irão ocorrer, além de possibilitar a venda de ingressos e a participação dos usuários no processo de feedback entre um produtor de eventos e quem participa do evento   </p>
+        <p>O <b>#PartiuEventos</b> é uma empresa que busca informar sobre os eventos que estão ocorrendo ou que irão ocorrer, além de possibilitar a venda de ingressos e a participação dos usuários no processo de feedback entre um produtor de eventos e quem participa do evento.</p>
       </div>
 
       <div class="col-lg-4 col-md-6 footer-links">
