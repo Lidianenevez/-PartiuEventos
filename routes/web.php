@@ -20,6 +20,7 @@ Auth::routes();
 
 Route::post('/avalie/{id}', 'Admin\AvaliacaoController@avaliar')->name('avalie');
 Route::resource('admin/evento', 'Admin\EventoController');
+Route::get('/boleto_action', 'Admin\PagSeguroController@action_boleto')->name('boleto_action');
 
 
 
