@@ -39,25 +39,36 @@
           <h2>{{ $e->nome_evento }}</h2>
         </div>
 
-        <nav class="nav flex-column">
-   <a class="btn btn5 nav-link active link-black-hover" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <div class="row">
+            <div class="col-lg-4 col-md-4">
+       
+          
+   <a class="btn btn5 btn-lg btn-block" data-toggle="collapse" href="#avaliacao" role="button" aria-expanded="false" aria-controls="collapseExample">
               Avaliação do Evento
              </a>
-             <div class="collapse" id="collapseExample">
+            <div class="collapse" id="avaliacao">
   <div class="card card-body">
     Dados da Avaliação
+    @foreach ($av as $a)
+      {{ $a->estrela }}
+    @endforeach
   </div>
 </div>
-             <br>
-  <a href="{{ route('evento.edit', $e->id) }}" class="btn btn5 nav-link active link-black-hover">Editar</a><br>
+  
+</div>
+             
+
+  <div class="col-lg-4 col-md-4">
+  <a href="{{ route('evento.edit', $e->id) }}" class="btn btn5 btn-lg btn-block">Editar</a>
+</div>
+  <div class="col-lg-4 col-md-4">
   <form action="{{ route('evento.destroy', $e->id) }}" method="post" class="formbutton">
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="btn btn5 nav-link btn-lg btn-block" style="color: red">Excluir</button>
+                <button type="submit" class="btn btn5 btn-lg btn-block">Excluir</button>
               </form>
-
-
-</nav>
+</div>
+</div>
 
 
         <div class="row">
@@ -93,39 +104,8 @@
 
     </section>
 
-            <div class="row justify-content-center" >
-            	<div class="col-md-10">
 
-            		<div class="btn-group" role="group" aria-label="Basic example">
-  <button class="btn btn5 button-style" type="button" data-toggle="collapse" data-target="#avaliacao" aria-expanded="false" aria-controls="collapseExample" style="border-top-left-radius: 5; border-bottom-left-radius: 5; border-radius: 5px;">
-  	Avaliação do Evento
-  </button>
-  <button class="btn btn5 button-style" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="border-top-left-radius: 5; border-bottom-left-radius: 5; border-radius: 5px;">
-  	Vizitantes
-  </button>
-  <form action="{{ route('evento.destroy', $e->id) }}" method="post" class="formbutton">
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="btn btn-lg btn5 button-style link-black-hover-bottom" style="border-top-left-radius: 5; border-bottom-left-radius: 5; border-radius: 5px;">Excluir</button>
-              </form>
-   <a href="{{ route('evento.edit', $e->id) }}" class="btn btn-lg btn5 button-style link-black-hover-bottom" style="border-top-left-radius: 5; border-bottom-left-radius: 5; border-radius: 5px;">Editar</a>
 
-</div>
-
-<div class="collapse" id="avaliacao">
-  <div class="card card-body">
-    Dados da Avaliação
-    @foreach ($av as $a)
-      {{ $a->estrela }}
-    @endforeach
-  </div>
-</div>
-
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-    Dados de Vizitantes
-  </div>
-</div>
 
        @endforeach
     </div>
