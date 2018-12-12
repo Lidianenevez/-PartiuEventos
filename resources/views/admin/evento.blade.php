@@ -47,10 +47,10 @@
               Avaliação do Evento
              </a>
             <div class="collapse" id="avaliacao">
-  <div class="card card-body">
-    Dados da Avaliação
-    <br>
-    Média de avaliacao
+  <div class="card card-body" style="border: 1px solid #f82249">
+    
+    <h5>Dados da Avaliação</h5>    
+    
     @foreach ($av as $a)
       @if ($a->fk_evento_id == $e->id)
         @php
@@ -60,14 +60,15 @@
         @endphp
       @endif
     @endforeach
-    {{ $media }}
-    <br>
-    Total de avaliações
-    {{ $contador }}
+    <p>Média de avaliações: <span style="color: #ffc107; font-size: 20px; font-weight: bolder;">{{ $media }} </span></p>
+   
+    <p>Total de avaliações: <span style="color: #ffc107; font-size: 20px; font-weight: bolder;"> {{ $contador }}</span></p>
+    
   </div>
 </div>
   
 </div>
+  
              
 
   <div class="col-lg-4 col-md-4">
