@@ -65,6 +65,27 @@
         </div>
       </div>
 
+      <div class="form-row">
+        <div class="form-group col-md-8">
+          <label for="nome_evento">Endereço</label>
+          <input id="nome_evento" type="text" placeholder="Digite o Endereço" class="form-control" name="endereco" value="{{ old('endereco') }}">
+          @if ($errors->has('endereco'))
+            <span class="text-danger" role="alert">
+              <strong>{{ $errors->first('endereco') }}</strong>
+            </span>
+          @endif
+        </div>
+        <div class="form-group col-md-4">
+          <label for="preco">Numero</label>
+           <input id="preco" type="number" step="0.01" placeholder="Numero" class="form-control" name="numero" value="{{ old('numero') }}">
+          @if ($errors->has('numero'))
+          <span class="text-danger" role="alert">
+            <strong>{{ $errors->first('numero') }}</strong>
+          </span>
+          @endif
+
+        </div>
+      </div>
 
       <div class="form-row">
         <div class="form-group col-md-3">
