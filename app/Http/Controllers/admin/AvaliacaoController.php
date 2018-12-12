@@ -20,8 +20,10 @@ class AvaliacaoController extends Controller
 	}
 	public function avaliar(Request $request, $id)
 	{
-		$av = Avaliacao::where('fk_evento_id',$id)->where('fk_user_id',Auth::id())->get();
-		if (!$av) {
+		$av = Avaliacao::where('fk_evento_id',$id)
+											->where('fk_user_id',Auth::id())
+												->get();
+		if (count($av) < 1) {
 			$a = new Avaliacao;
 			$a->fk_user_id = Auth::id();
 			$a->fk_evento_id = $id;
